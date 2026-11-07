@@ -1,0 +1,7 @@
+# Generated at runtime / deployment secrets — never commit
+snapshot.json
+agent-registration.json
+switch-agent.env
+bridge.env
+demo-out/
+__pycache__/

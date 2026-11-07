@@ -1,0 +1,143 @@
+{
+ "generated_at_toronto": "2026-11-07 17:19 Toronto",
+ "generated_at_utc": "2026-11-07T22:19:09Z",
+ "sources": [
+  "deadline register (deadlines.json) on the fleet VM",
+  "kuma-lite mutual watcher (watch-status.txt)",
+  "GitHub MissionWinning/67 via connector"
+ ],
+ "deadlines": {
+  "active_total": 96,
+  "counts": {
+   "OVERDUE": 3,
+   "T-1": 3,
+   "T-3": 8,
+   "T-7": 22,
+   "OK": 60
+  },
+  "overdue": [
+   {
+    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "due_toronto": "Wed Nov 04, 10:00",
+    "days_left": -3.3,
+    "band": "OVERDUE",
+    "status": "open",
+    "gate": "Decide: recognise the TELUS debt or request written validation"
+   },
+   {
+    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "due_toronto": "Fri Nov 06, 23:59",
+    "days_left": -0.7,
+    "band": "OVERDUE",
+    "status": "open",
+    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)"
+   },
+   {
+    "name": "Wise Business verification \u2014 trading address rejected, 2-day clock",
+    "due_toronto": "Sat Nov 07, 07:57",
+    "days_left": -0.4,
+    "band": "OVERDUE",
+    "status": "open",
+    "gate": "Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)"
+   }
+  ],
+  "due_within_24h": [
+   {
+    "name": "Rocket Pool GMC Round 42 grant",
+    "due_toronto": "Sat Nov 07, 18:59",
+    "days_left": 0.1,
+    "band": "T-1",
+    "status": "watching",
+    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)"
+   },
+   {
+    "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
+    "due_toronto": "Sat Nov 07, 23:29",
+    "days_left": 0.3,
+    "band": "T-1",
+    "status": "in_progress",
+    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)"
+   },
+   {
+    "name": "MLH Solana Hackathon (registration confirmed)",
+    "due_toronto": "Sun Nov 08, 10:00",
+    "days_left": 0.7,
+    "band": "T-1",
+    "status": "scoped",
+    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier"
+   }
+  ],
+  "next_upcoming": [
+   {
+    "name": "Rocket Pool GMC Round 42 grant",
+    "due_toronto": "Sat Nov 07, 18:59",
+    "days_left": 0.1,
+    "band": "T-1",
+    "status": "watching",
+    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)"
+   },
+   {
+    "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
+    "due_toronto": "Sat Nov 07, 23:29",
+    "days_left": 0.3,
+    "band": "T-1",
+    "status": "in_progress",
+    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)"
+   },
+   {
+    "name": "MLH Solana Hackathon (registration confirmed)",
+    "due_toronto": "Sun Nov 08, 10:00",
+    "days_left": 0.7,
+    "band": "T-1",
+    "status": "scoped",
+    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier"
+   },
+   {
+    "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
+    "due_toronto": "Sun Nov 08, 18:00",
+    "days_left": 1.0,
+    "band": "T-3",
+    "status": "registered",
+    "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)"
+   },
+   {
+    "name": "Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission",
+    "due_toronto": "Sun Nov 08, 23:59",
+    "days_left": 1.3,
+    "band": "T-3",
+    "status": "open",
+    "gate": "Review the [FOUNDER] block in the prep pack and submit the essay"
+   }
+  ]
+ },
+ "watch": {
+  "raw": "2026-11-07T22:15:11Z DOWN: site-sitebefore (5/6 monitors up)"
+ },
+ "prs": {
+  "fetched_at_toronto": "2026-11-07 17:20 Toronto",
+  "latest": [
+   {
+    "number": 5588,
+    "title": "docs(applications): Cosmos essay + Flip + Vultr Agent Rush founder prep"
+   },
+   {
+    "number": 5587,
+    "title": "brain: redact-clone public_safe flag (partial rebuild of #5336)"
+   },
+   {
+    "number": 5586,
+    "title": "brain: TASKS.jsonl vultr lane rows and stale review updates (rebuild)"
+   },
+   {
+    "number": 5585,
+    "title": "brain: muse-spark memory export 2026-11-07 16:52 ET"
+   },
+   {
+    "number": 5584,
+    "title": "roundtable: round 2 \u2014 full re-run (muse-spark convergence, single-seat)"
+   }
+  ],
+  "open": 25,
+  "repo": "MissionWinning/67"
+ }
+}
