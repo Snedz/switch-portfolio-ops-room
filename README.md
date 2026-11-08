@@ -22,7 +22,9 @@ twice a day on a timer.
 questions · answers in ~1–2 s · ops snapshot refreshes every 5 minutes, every
 answer printing its snapshot time · 123 commitments, 64 ventures, 1 operator · 10 founder-gated actions
 waiting · 25 open PRs · 6 fleet monitors (5 up, 1 genuinely DOWN) ·
-$1,512.65 of real overdue money on the board.
+real overdue money on the board.
+
+Personal financial details (creditors, amounts, file numbers) are redacted in these samples; the agent's answers are otherwise verbatim.
 
 **One real answer** — `@ops-agent brief`, live in the room at 19:00 EST,
 Nov 7 (verbatim from `evidence/transcript.md`):
@@ -30,8 +32,8 @@ Nov 7 (verbatim from `evidence/transcript.md`):
 > **Portfolio brief** — 2026-11-07 18:58 Toronto
 >
 > 🔴 **Overdue (3):**
-> - TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — 3.4d overdue
-> - BeforeChristmas Etsy bill $17.17 — suspension if unpaid — 0.8d overdue
+> - a collections decision (creditor, file number and amount redacted) — 3.4d overdue
+> - BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid — 0.8d overdue
 > - Wise Business verification — trading address rejected, 2-day clock — 0.5d overdue
 >
 > 🟠 **Due within 48h (7):**
@@ -42,8 +44,8 @@ Nov 7 (verbatim from `evidence/transcript.md`):
 > - Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59
 >
 > 🔑 **Top gates waiting on the founder (10 total):**
-> - Decide: recognise the TELUS debt or request written validation — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48)
-> - Pay the $17.17 Etsy bill (or confirm it is already paid) — BeforeChristmas Etsy bill $17.17 — suspension if unpaid
+> - Decide a collections item: recognise it or request written validation — a collections decision (creditor, file number and amount redacted)
+> - Pay the marketplace bill (or confirm it is already paid) — BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid
 > - Upload a trading-address proof (…) + complete phone ID verification (ID photo + selfie) — Wise Business verification — trading address rejected, 2-day clock
 >
 > 🩺 **Watch:** 5/6 monitors up — DOWN: site-sitebefore
@@ -120,7 +122,7 @@ read. It answers:
 | --- | --- |
 | `deadlines` | The board: active count, overdue items, due ≤24h, next five — from the real deadline register |
 | `gates` | The founder-gated actions waiting (the register's `gated_by` steps: payments, submissions, identity checks), most urgent first, with each action's estimated minutes |
-| `money` | Overdue payments (a $1,495.48 collection, a $17.17 Etsy bill that suspends the shop, a lapsed bank verification) + payment deadlines due in the next two weeks |
+| `money` | Overdue payments (a collections decision, a marketplace bill that suspends the shop, a lapsed bank verification) + payment deadlines due in the next two weeks |
 | `health` | Per-monitor watch state — every kuma-lite monitor named, UP/DOWN, and since when |
 | `brief` | One compact brief: overdues + due ≤48h + top gates + watch state + PR count |
 | `status` | The mutual watcher summary line: the box↔VM monitoring state (one monitor was genuinely DOWN during the demo — site-sitebefore — and the agent said so) |
@@ -263,8 +265,8 @@ running agent. Real output, against `snapshot.example.json` (generated
 **Deadline board** — 97 active items (4 overdue, 3 due ≤24h, 7 due ≤3d, 23 due ≤7d)
 
 🔴 **Overdue:**
-- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — was due Wed Nov 04, 10:00 (3.4d ago)
-- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — was due Fri Nov 06, 23:59 (0.8d ago)
+- a collections decision (creditor, file number and amount redacted) — was due Wed Nov 04, 10:00 (3.4d ago)
+- BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid — was due Fri Nov 06, 23:59 (0.8d ago)
 - Wise Business verification — trading address rejected, 2-day clock — was due Sat Nov 07, 07:57 (0.5d ago)
 - Rocket Pool GMC Round 42 grant — was due Sat Nov 07, 18:59 (0.0d ago)
 
@@ -286,10 +288,10 @@ running agent. Real output, against `snapshot.example.json` (generated
 @ops-agent gates
 ======================================================================
 **Founder gates — 10 actions waiting on you, most urgent first:**
-1. **Decide: recognise the TELUS debt or request written validation** · ~10 min
-   ↳ TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — overdue by 3.4d
-2. **Pay the $17.17 Etsy bill (or confirm it is already paid)** · ~3 min
-   ↳ BeforeChristmas Etsy bill $17.17 — suspension if unpaid — overdue by 0.8d
+1. **Decide a collections item: recognise it or request written validation** · ~10 min
+   ↳ a collections decision (creditor, file number and amount redacted) — overdue by 3.4d
+2. **Pay the marketplace bill (or confirm it is already paid)** · ~3 min
+   ↳ BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid — overdue by 0.8d
 3. **Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)** · ~10 min
    ↳ Wise Business verification — trading address rejected, 2-day clock — overdue by 0.5d
 4. **Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit — ETH staking)** · ~2 min
@@ -317,10 +319,10 @@ These are the register's `gated_by` actions: steps only the founder can take (pa
 **Money — what's owed and what's coming**
 
 🔴 **Overdue:**
-- $1,495.48 — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) (was due Wed Nov 04, 10:00, 3.4d ago)
-  ↳ Next step: Decide: recognise the TELUS debt or request written validation
-- $17.17 — BeforeChristmas Etsy bill $17.17 — suspension if unpaid (was due Fri Nov 06, 23:59, 0.8d ago)
-  ↳ Next step: Pay the $17.17 Etsy bill (or confirm it is already paid)
+- (amount redacted) — a collections decision (creditor, file number and amount redacted) (was due Wed Nov 04, 10:00, 3.4d ago)
+  ↳ Next step: Decide a collections item: recognise it or request written validation
+- (amount redacted) — BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid (was due Fri Nov 06, 23:59, 0.8d ago)
+  ↳ Next step: Pay the marketplace bill (or confirm it is already paid)
 - Wise Business verification — trading address rejected, 2-day clock (was due Sat Nov 07, 07:57, 0.5d ago)
   ↳ Next step: Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)
 
@@ -328,7 +330,7 @@ These are the register's `gated_by` actions: steps only the founder can take (pa
 - $500 — Agent37 $500 credit offer — $5 top-up final click (offer expires ~Nov 11) — due Wed Nov 11, 15:42 (3.8d)
 - $69.99 — Surfshark 12-mo VPN via Apple — cancel by Nov 11 or $69.99/yr starts Nov 12 — due Wed Nov 11, 23:59 (4.2d)
 
-Amounts are read from the register entries themselves; the Etsy payout bank (Airwallex) is locked by standing instruction and never appears here as an action.
+Amounts are read from the register entries themselves; the shop's payout bank is locked by standing instruction and never appears here as an action.
 
 — Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
 
@@ -353,8 +355,8 @@ The watch layer: the VM monitors the box (SSH, Healthchecks, ntfy, Mattermost) a
 **Portfolio brief** — 2026-11-07 19:29 Toronto
 
 🔴 **Overdue (4):**
-- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — 3.4d overdue
-- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — 0.8d overdue
+- a collections decision (creditor, file number and amount redacted) — 3.4d overdue
+- BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid — 0.8d overdue
 - Wise Business verification — trading address rejected, 2-day clock — 0.5d overdue
 - Rocket Pool GMC Round 42 grant — 0.0d overdue
 
@@ -366,8 +368,8 @@ The watch layer: the VM monitors the box (SSH, Healthchecks, ntfy, Mattermost) a
 - Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59
 
 🔑 **Top gates waiting on the founder (10 total):**
-- Decide: recognise the TELUS debt or request written validation — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48)
-- Pay the $17.17 Etsy bill (or confirm it is already paid) — BeforeChristmas Etsy bill $17.17 — suspension if unpaid
+- Decide a collections item: recognise it or request written validation — a collections decision (creditor, file number and amount redacted)
+- Pay the marketplace bill (or confirm it is already paid) — BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid
 - Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) — Wise Business verification — trading address rejected, 2-day clock
 
 🩺 **Watch:** 5/6 monitors up — DOWN: site-sitebefore

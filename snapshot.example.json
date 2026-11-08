@@ -18,27 +18,27 @@
   "overdue": [
    {
     "id": "telus-dca-collection",
-    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "name": "a collections decision (creditor, file number and amount redacted)",
     "category": "gate",
     "due_toronto": "Wed Nov 04, 10:00",
     "days_left": -3.4,
     "band": "OVERDUE",
     "status": "open",
-    "gate": "Decide: recognise the TELUS debt or request written validation",
+    "gate": "Decide a collections item: recognise it or request written validation",
     "gate_minutes": 10,
-    "amount": "$1,495.48"
+    "amount": "(amount redacted)"
    },
    {
     "id": "etsy-bill",
-    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "name": "BeforeChristmas marketplace bill (amount redacted) \u2014 suspension if unpaid",
     "category": "payment",
     "due_toronto": "Fri Nov 06, 23:59",
     "days_left": -0.8,
     "band": "OVERDUE",
     "status": "open",
-    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)",
+    "gate": "Pay the marketplace bill (or confirm it is already paid)",
     "gate_minutes": 3,
-    "amount": "$17.17"
+    "amount": "(amount redacted)"
    },
    {
     "id": "wise-verification",
@@ -253,19 +253,19 @@
   ],
   "gates": [
    {
-    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "name": "a collections decision (creditor, file number and amount redacted)",
     "due_toronto": "Wed Nov 04, 10:00",
     "days_left": -3.4,
     "band": "OVERDUE",
-    "action": "Decide: recognise the TELUS debt or request written validation",
+    "action": "Decide a collections item: recognise it or request written validation",
     "minutes": 10
    },
    {
-    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "name": "BeforeChristmas marketplace bill (amount redacted) \u2014 suspension if unpaid",
     "due_toronto": "Fri Nov 06, 23:59",
     "days_left": -0.8,
     "band": "OVERDUE",
-    "action": "Pay the $17.17 Etsy bill (or confirm it is already paid)",
+    "action": "Pay the marketplace bill (or confirm it is already paid)",
     "minutes": 3
    },
    {
@@ -337,18 +337,18 @@
  "money": {
   "overdue": [
    {
-    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
-    "amount": "$1,495.48",
+    "name": "a collections decision (creditor, file number and amount redacted)",
+    "amount": "(amount redacted)",
     "due_toronto": "Wed Nov 04, 10:00",
     "days_left": -3.4,
-    "gate": "Decide: recognise the TELUS debt or request written validation"
+    "gate": "Decide a collections item: recognise it or request written validation"
    },
    {
-    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
-    "amount": "$17.17",
+    "name": "BeforeChristmas marketplace bill (amount redacted) \u2014 suspension if unpaid",
+    "amount": "(amount redacted)",
     "due_toronto": "Fri Nov 06, 23:59",
     "days_left": -0.8,
-    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)"
+    "gate": "Pay the marketplace bill (or confirm it is already paid)"
    },
    {
     "name": "Wise Business verification \u2014 trading address rejected, 2-day clock",

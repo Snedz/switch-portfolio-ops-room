@@ -90,8 +90,8 @@ def fmt_money(s: dict) -> str:
         for i in up:
             amt = f"{i['amount']} — " if i.get("amount") else ""
             lines.append(f"- {amt}{i['name']} — due {i['due_toronto']} ({i['days_left']}d)")
-    lines.append("\nAmounts are read from the register entries themselves; the Etsy payout bank "
-                 "(Airwallex) is locked by standing instruction and never appears here as an action.")
+    lines.append("\nAmounts are read from the register entries themselves; the shop's payout bank "
+                 "is locked by standing instruction and never appears here as an action.")
     return "\n".join(lines)
 
 

@@ -1,5 +1,6 @@
 # Demo excerpt — Portfolio Ops Room, live round (2026-11-07 17:25 EST)
 
+Personal financial details (creditors, amounts, file numbers) are redacted in these samples; the agent's answers are otherwise verbatim.
 Verbatim posts from Mattermost #portfolio-ops (Switch stack, 67-build-1), exported via the
 Mattermost API. Full 34-post channel transcript: transcript.md / transcript.json in this folder.
 Note: before each answer, Switch's own identity guard posts a notice because the demo chat
@@ -23,8 +24,8 @@ Running the portfolio from this room today. Ops Agent — three things:
 **Deadline board** — 96 active items (3 overdue, 3 due ≤24h, 8 due ≤3d, 22 due ≤7d)
 
 🔴 **Overdue:**
-- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — was due Wed Nov 04, 10:00 (3.3d ago)
-- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — was due Fri Nov 06, 23:59 (0.7d ago)
+- a collections decision (creditor, file number and amount redacted) — was due Wed Nov 04, 10:00 (3.3d ago)
+- BeforeChristmas marketplace bill (amount redacted) — suspension if unpaid — was due Fri Nov 06, 23:59 (0.7d ago)
 - Wise Business verification — trading address rejected, 2-day clock — was due Sat Nov 07, 07:57 (0.4d ago)
 
 🟠 **Due within 24h:**

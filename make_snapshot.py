@@ -26,7 +26,7 @@ HERE = Path(__file__).parent
 TERMINAL = {"submitted", "done", "closed", "paid", "passed_deliberate"}
 AMOUNT_RE = re.compile(r"\$[\d,]+(?:\.\d{2})?")
 # Register entries that are money obligations even when filed under another
-# category (the TELUS collection is a decision gate AND a $1,495.48 debt).
+# category (a collections item is a decision gate AND a debt).
 MONEY_IDS = {"telus-dca-collection"}
 
 
