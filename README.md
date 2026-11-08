@@ -13,12 +13,14 @@ talks: ask `@ops-agent deadlines`, `gates`, `money`, `health`, `brief`,
 `status`, or `prs` in the channel and the agent answers in seconds, from
 real data, with the data's age labelled on every answer. And the room does
 not wait to be asked: a second agent watches the fleet's monitors and
-posts the moment one flips, and a portfolio digest lands in the room
+posts the moment one flips (logic dry-run verified only; no real
+monitor transition occurred tonight), and a portfolio digest lands in
+the room
 twice a day on a timer.
 
 **By the numbers** (live board, snapshot 2026-11-07 19:24 Toronto): 7
-questions · answers in ~1–2 s · data snapshot never more than 5 minutes
-old · 123 commitments, 64 ventures, 1 operator · 10 founder-gated actions
+questions · answers in ~1–2 s · ops snapshot refreshes every 5 minutes, every
+answer printing its snapshot time · 123 commitments, 64 ventures, 1 operator · 10 founder-gated actions
 waiting · 25 open PRs · 6 fleet monitors (5 up, 1 genuinely DOWN) ·
 $1,512.65 of real overdue money on the board.
 
@@ -553,6 +555,9 @@ clip and has earned $0**. The Producer reports state only — it does not
 generate, post, or clip — and where the pipeline is waiting, it says so.
 That is the personal workflow, run the same way as the business one: the
 creative work's true state, one mention away, including the stuck parts.
+The Producer now runs 11 intents and publishes two room documents —
+the pipeline snapshot and the state & review gate — rendered from the
+same snapshot it answers from (see `docs/ARCHITECTURE.md`).
 
 ## How Switch is used — the map
 
@@ -588,7 +593,7 @@ nobody to talk to.
   the Producer Agent in the Creator Room. Transcripts:
   `evidence/transcript.md` and `evidence/creator-room-evidence.md`.
 - The ops snapshot is refreshed every 5 minutes by cron; the producer
-  snapshot is a one-off, generated 21:36 ET Nov 7, and does not yet
+  snapshot is a one-off, generated 22:36 ET Nov 7, and does not yet
   auto-refresh. Every answer prints its snapshot's generation time —
   data age is labelled, never hidden.
 - The digest timer fired **unattended at 21:45** tonight and posted the
