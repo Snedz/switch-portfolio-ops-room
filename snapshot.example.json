@@ -1,117 +1,414 @@
 {
- "generated_at_toronto": "2026-11-07 17:19 Toronto",
- "generated_at_utc": "2026-11-07T22:19:09Z",
+ "generated_at_toronto": "2026-11-07 19:04 Toronto",
+ "generated_at_utc": "2026-11-08T00:04:00Z",
  "sources": [
   "deadline register (deadlines.json) on the fleet VM",
-  "kuma-lite mutual watcher (watch-status.txt)",
+  "kuma-lite mutual watcher (watch-status.txt + per-monitor state)",
   "GitHub MissionWinning/67 via connector"
  ],
  "deadlines": {
-  "active_total": 96,
+  "active_total": 97,
   "counts": {
-   "OVERDUE": 3,
+   "OVERDUE": 4,
    "T-1": 3,
-   "T-3": 8,
-   "T-7": 22,
+   "T-3": 7,
+   "T-7": 23,
    "OK": 60
   },
   "overdue": [
    {
+    "id": "telus-dca-collection",
     "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "category": "gate",
     "due_toronto": "Wed Nov 04, 10:00",
-    "days_left": -3.3,
+    "days_left": -3.4,
     "band": "OVERDUE",
     "status": "open",
-    "gate": "Decide: recognise the TELUS debt or request written validation"
+    "gate": "Decide: recognise the TELUS debt or request written validation",
+    "gate_minutes": 10,
+    "amount": "$1,495.48"
    },
    {
+    "id": "etsy-bill",
     "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "category": "payment",
     "due_toronto": "Fri Nov 06, 23:59",
-    "days_left": -0.7,
+    "days_left": -0.8,
     "band": "OVERDUE",
     "status": "open",
-    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)"
+    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)",
+    "gate_minutes": 3,
+    "amount": "$17.17"
    },
    {
+    "id": "wise-verification",
     "name": "Wise Business verification \u2014 trading address rejected, 2-day clock",
+    "category": "payment",
     "due_toronto": "Sat Nov 07, 07:57",
-    "days_left": -0.4,
+    "days_left": -0.5,
     "band": "OVERDUE",
     "status": "open",
-    "gate": "Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)"
+    "gate": "Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)",
+    "gate_minutes": 10,
+    "amount": null
+   },
+   {
+    "id": "rocket-pool-gmc-42",
+    "name": "Rocket Pool GMC Round 42 grant",
+    "category": "application",
+    "due_toronto": "Sat Nov 07, 18:59",
+    "days_left": -0.0,
+    "band": "OVERDUE",
+    "status": "watching",
+    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)",
+    "gate_minutes": 2,
+    "amount": null
    }
   ],
   "due_within_24h": [
    {
-    "name": "Rocket Pool GMC Round 42 grant",
-    "due_toronto": "Sat Nov 07, 18:59",
-    "days_left": 0.1,
-    "band": "T-1",
-    "status": "watching",
-    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)"
-   },
-   {
+    "id": "flip-the-switch-hackathon",
     "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
+    "category": "hackathon",
     "due_toronto": "Sat Nov 07, 23:29",
-    "days_left": 0.3,
+    "days_left": 0.2,
     "band": "T-1",
     "status": "in_progress",
-    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)"
+    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)",
+    "gate_minutes": 2,
+    "amount": "$10"
    },
    {
+    "id": "mlh-solana",
     "name": "MLH Solana Hackathon (registration confirmed)",
+    "category": "hackathon",
     "due_toronto": "Sun Nov 08, 10:00",
-    "days_left": 0.7,
+    "days_left": 0.6,
     "band": "T-1",
     "status": "scoped",
-    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier"
+    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "vultr-agent-rush",
+    "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
+    "category": "hackathon",
+    "due_toronto": "Sun Nov 08, 18:00",
+    "days_left": 1.0,
+    "band": "T-1",
+    "status": "registered",
+    "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
+    "gate_minutes": 2,
+    "amount": null
+   }
+  ],
+  "due_within_48h": [
+   {
+    "id": "rocket-pool-gmc-42",
+    "name": "Rocket Pool GMC Round 42 grant",
+    "category": "application",
+    "due_toronto": "Sat Nov 07, 18:59",
+    "days_left": -0.0,
+    "band": "OVERDUE",
+    "status": "watching",
+    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "flip-the-switch-hackathon",
+    "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
+    "category": "hackathon",
+    "due_toronto": "Sat Nov 07, 23:29",
+    "days_left": 0.2,
+    "band": "T-1",
+    "status": "in_progress",
+    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)",
+    "gate_minutes": 2,
+    "amount": "$10"
+   },
+   {
+    "id": "mlh-solana",
+    "name": "MLH Solana Hackathon (registration confirmed)",
+    "category": "hackathon",
+    "due_toronto": "Sun Nov 08, 10:00",
+    "days_left": 0.6,
+    "band": "T-1",
+    "status": "scoped",
+    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "vultr-agent-rush",
+    "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
+    "category": "hackathon",
+    "due_toronto": "Sun Nov 08, 18:00",
+    "days_left": 1.0,
+    "band": "T-1",
+    "status": "registered",
+    "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "cosmos-inherent-essay",
+    "name": "Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission",
+    "category": "application",
+    "due_toronto": "Sun Nov 08, 23:59",
+    "days_left": 1.2,
+    "band": "T-3",
+    "status": "open",
+    "gate": "Review the [FOUNDER] block in the prep pack and submit the essay",
+    "gate_minutes": 15,
+    "amount": null
+   },
+   {
+    "id": "celo-open-rails",
+    "name": "Celo Agents on Open Rails ($5K in CELO)",
+    "category": "hackathon",
+    "due_toronto": "Mon Nov 09, 04:00",
+    "days_left": 1.4,
+    "band": "T-3",
+    "status": "watching",
+    "gate": "Decide: enter Celo (needs real mainnet funds + real users) or skip",
+    "gate_minutes": 2,
+    "amount": "$5"
+   },
+   {
+    "id": "learn-ar-specs",
+    "name": "Learn AR with Specs, $2.5K",
+    "category": "hackathon",
+    "due_toronto": "Mon Nov 09, 17:00",
+    "days_left": 1.9,
+    "band": "T-3",
+    "status": "watching",
+    "gate": "Decide: enter Learn AR with Specs (Devpost) or pass",
+    "gate_minutes": 2,
+    "amount": "$2"
    }
   ],
   "next_upcoming": [
    {
+    "id": "flip-the-switch-hackathon",
+    "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
+    "category": "hackathon",
+    "due_toronto": "Sat Nov 07, 23:29",
+    "days_left": 0.2,
+    "band": "T-1",
+    "status": "in_progress",
+    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)",
+    "gate_minutes": 2,
+    "amount": "$10"
+   },
+   {
+    "id": "mlh-solana",
+    "name": "MLH Solana Hackathon (registration confirmed)",
+    "category": "hackathon",
+    "due_toronto": "Sun Nov 08, 10:00",
+    "days_left": 0.6,
+    "band": "T-1",
+    "status": "scoped",
+    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "vultr-agent-rush",
+    "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
+    "category": "hackathon",
+    "due_toronto": "Sun Nov 08, 18:00",
+    "days_left": 1.0,
+    "band": "T-1",
+    "status": "registered",
+    "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
+    "gate_minutes": 2,
+    "amount": null
+   },
+   {
+    "id": "cosmos-inherent-essay",
+    "name": "Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission",
+    "category": "application",
+    "due_toronto": "Sun Nov 08, 23:59",
+    "days_left": 1.2,
+    "band": "T-3",
+    "status": "open",
+    "gate": "Review the [FOUNDER] block in the prep pack and submit the essay",
+    "gate_minutes": 15,
+    "amount": null
+   },
+   {
+    "id": "celo-open-rails",
+    "name": "Celo Agents on Open Rails ($5K in CELO)",
+    "category": "hackathon",
+    "due_toronto": "Mon Nov 09, 04:00",
+    "days_left": 1.4,
+    "band": "T-3",
+    "status": "watching",
+    "gate": "Decide: enter Celo (needs real mainnet funds + real users) or skip",
+    "gate_minutes": 2,
+    "amount": "$5"
+   }
+  ],
+  "gates": [
+   {
+    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "due_toronto": "Wed Nov 04, 10:00",
+    "days_left": -3.4,
+    "band": "OVERDUE",
+    "action": "Decide: recognise the TELUS debt or request written validation",
+    "minutes": 10
+   },
+   {
+    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "due_toronto": "Fri Nov 06, 23:59",
+    "days_left": -0.8,
+    "band": "OVERDUE",
+    "action": "Pay the $17.17 Etsy bill (or confirm it is already paid)",
+    "minutes": 3
+   },
+   {
+    "name": "Wise Business verification \u2014 trading address rejected, 2-day clock",
+    "due_toronto": "Sat Nov 07, 07:57",
+    "days_left": -0.5,
+    "band": "OVERDUE",
+    "action": "Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)",
+    "minutes": 10
+   },
+   {
     "name": "Rocket Pool GMC Round 42 grant",
     "due_toronto": "Sat Nov 07, 18:59",
-    "days_left": 0.1,
-    "band": "T-1",
-    "status": "watching",
-    "gate": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)"
+    "days_left": -0.0,
+    "band": "OVERDUE",
+    "action": "Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)",
+    "minutes": 2
    },
    {
     "name": "Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission",
     "due_toronto": "Sat Nov 07, 23:29",
-    "days_left": 0.3,
+    "days_left": 0.2,
     "band": "T-1",
-    "status": "in_progress",
-    "gate": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)"
+    "action": "Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)",
+    "minutes": 2
    },
    {
     "name": "MLH Solana Hackathon (registration confirmed)",
     "due_toronto": "Sun Nov 08, 10:00",
-    "days_left": 0.7,
+    "days_left": 0.6,
     "band": "T-1",
-    "status": "scoped",
-    "gate": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier"
+    "action": "Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier",
+    "minutes": 2
    },
    {
     "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
     "due_toronto": "Sun Nov 08, 18:00",
     "days_left": 1.0,
-    "band": "T-3",
-    "status": "registered",
-    "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)"
+    "band": "T-1",
+    "action": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
+    "minutes": 2
    },
    {
     "name": "Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission",
     "due_toronto": "Sun Nov 08, 23:59",
-    "days_left": 1.3,
+    "days_left": 1.2,
     "band": "T-3",
-    "status": "open",
-    "gate": "Review the [FOUNDER] block in the prep pack and submit the essay"
+    "action": "Review the [FOUNDER] block in the prep pack and submit the essay",
+    "minutes": 15
+   },
+   {
+    "name": "Celo Agents on Open Rails ($5K in CELO)",
+    "due_toronto": "Mon Nov 09, 04:00",
+    "days_left": 1.4,
+    "band": "T-3",
+    "action": "Decide: enter Celo (needs real mainnet funds + real users) or skip",
+    "minutes": 2
+   },
+   {
+    "name": "Learn AR with Specs, $2.5K",
+    "due_toronto": "Mon Nov 09, 17:00",
+    "days_left": 1.9,
+    "band": "T-3",
+    "action": "Decide: enter Learn AR with Specs (Devpost) or pass",
+    "minutes": 2
+   }
+  ]
+ },
+ "money": {
+  "overdue": [
+   {
+    "name": "TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)",
+    "amount": "$1,495.48",
+    "due_toronto": "Wed Nov 04, 10:00",
+    "days_left": -3.4,
+    "gate": "Decide: recognise the TELUS debt or request written validation"
+   },
+   {
+    "name": "BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid",
+    "amount": "$17.17",
+    "due_toronto": "Fri Nov 06, 23:59",
+    "days_left": -0.8,
+    "gate": "Pay the $17.17 Etsy bill (or confirm it is already paid)"
+   },
+   {
+    "name": "Wise Business verification \u2014 trading address rejected, 2-day clock",
+    "amount": null,
+    "due_toronto": "Sat Nov 07, 07:57",
+    "days_left": -0.5,
+    "gate": "Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)"
+   }
+  ],
+  "upcoming": [
+   {
+    "name": "Agent37 $500 credit offer \u2014 $5 top-up final click (offer expires ~Nov 11)",
+    "amount": "$500",
+    "due_toronto": "Wed Nov 11, 15:42",
+    "days_left": 3.9,
+    "gate": "Final click on the Agent37 $5 top-up payment page \u2014 founder YES already given Nov 5, 1:08 PM (fleet record)"
+   },
+   {
+    "name": "Surfshark 12-mo VPN via Apple \u2014 cancel by Nov 11 or $69.99/yr starts Nov 12",
+    "amount": "$69.99",
+    "due_toronto": "Wed Nov 11, 23:59",
+    "days_left": 4.2,
+    "gate": "Decide: keep Surfshark ($69.99/yr from Nov 12) or cancel before the paid year starts"
    }
   ]
  },
  "watch": {
-  "raw": "2026-11-07T22:15:11Z DOWN: site-sitebefore (5/6 monitors up)"
+  "raw": "2026-11-08T00:01:36Z DOWN: site-sitebefore (5/6 monitors up)",
+  "monitors": [
+   {
+    "name": "box-healthchecks",
+    "status": "UP",
+    "since_toronto": "Sat Nov 07, 15:55"
+   },
+   {
+    "name": "box-mattermost",
+    "status": "UP",
+    "since_toronto": "Sat Nov 07, 15:55"
+   },
+   {
+    "name": "box-ntfy",
+    "status": "UP",
+    "since_toronto": "Sat Nov 07, 15:55"
+   },
+   {
+    "name": "box-ssh",
+    "status": "UP",
+    "since_toronto": "Sat Nov 07, 15:55"
+   },
+   {
+    "name": "site-missionwinning",
+    "status": "UP",
+    "since_toronto": "Sat Nov 07, 15:55"
+   },
+   {
+    "name": "site-sitebefore",
+    "status": "DOWN",
+    "since_toronto": "Sat Nov 07, 15:55"
+   }
+  ]
  },
  "prs": {
   "fetched_at_toronto": "2026-11-07 17:20 Toronto",

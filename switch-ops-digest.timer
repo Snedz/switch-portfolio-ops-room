@@ -1,0 +1,11 @@
+[Unit]
+Description=Post the Portfolio Ops digest twice a day (08:45 + 21:45 America/Toronto)
+
+[Timer]
+OnCalendar=*-*-* 08:45:00 America/Toronto
+OnCalendar=*-*-* 21:45:00 America/Toronto
+Persistent=true
+Unit=switch-ops-digest.service
+
+[Install]
+WantedBy=timers.target

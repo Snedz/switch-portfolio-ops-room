@@ -202,5 +202,179 @@
   "user": "ops-agent",
   "message": "**Open pull requests \u2014 MissionWinning/67: 25**\n- #5588 docs(applications): Cosmos essay + Flip + Vultr Agent Rush founder prep\n- #5587 brain: redact-clone public_safe flag (partial rebuild of #5336)\n- #5586 brain: TASKS.jsonl vultr lane rows and stale review updates (rebuild)\n- #5585 brain: muse-spark memory export 2026-11-07 16:52 ET\n- #5584 roundtable: round 2 \u2014 full re-run (muse-spark convergence, single-seat)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 17:24 Toronto (data age is labelled, never hidden)",
   "id": "8tbckxjappri7d5egw6snb777w"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:52 EST",
+  "user": "user",
+  "message": "Evening check \u2014 running the full question set, Ops Agent:",
+  "id": "mi1cfu4n9jb75rh4qypjm4o51y"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:52 EST",
+  "user": "user",
+  "message": "@ops-agent deadlines",
+  "id": "txxriccyn7ds3qap8ozzmbssoa"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:52 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "9183bxs5r7f6fykknekg3tr8yh"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:53 EST",
+  "user": "ops-agent",
+  "message": "**Deadline board** \u2014 97 active items (3 overdue, 4 due \u226424h, 7 due \u22643d, 22 due \u22647d)\n\n\ud83d\udd34 **Overdue:**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 was due Wed Nov 04, 10:00 (3.4d ago)\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 was due Fri Nov 06, 23:59 (0.8d ago)\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 was due Sat Nov 07, 07:57 (0.5d ago)\n\n\ud83d\udfe0 **Due within 24h:**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n\n**Next up:**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59 (0.0d)\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29 (0.2d)\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00 (0.6d)\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00 (1.0d)\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59 (1.2d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "ycnze9awqjri9cmxkh5u68sgte"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:54 EST",
+  "user": "user",
+  "message": "@ops-agent gates",
+  "id": "un9zs3meibrkigrfh68uqne34c"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:54 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "cme5wd7uabdr8b9rjmak133r4a"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:55 EST",
+  "user": "ops-agent",
+  "message": "**Founder gates \u2014 10 actions waiting on you, most urgent first:**\n1. **Decide: recognise the TELUS debt or request written validation** \u00b7 ~10 min\n   \u21b3 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 overdue by 3.4d\n2. **Pay the $17.17 Etsy bill (or confirm it is already paid)** \u00b7 ~3 min\n   \u21b3 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 overdue by 0.8d\n3. **Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)** \u00b7 ~10 min\n   \u21b3 Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 overdue by 0.5d\n4. **Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit \u2014 ETH staking)** \u00b7 ~2 min\n   \u21b3 Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59 (0.0d)\n5. **Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)** \u00b7 ~2 min\n   \u21b3 Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29 (0.2d)\n6. **Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier** \u00b7 ~2 min\n   \u21b3 MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00 (0.6d)\n7. **Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)** \u00b7 ~2 min\n   \u21b3 Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00 (1.0d)\n8. **Review the [FOUNDER] block in the prep pack and submit the essay** \u00b7 ~15 min\n   \u21b3 Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59 (1.2d)\n9. **Decide: enter Celo (needs real mainnet funds + real users) or skip** \u00b7 ~2 min\n   \u21b3 Celo Agents on Open Rails ($5K in CELO) \u2014 due Mon Nov 09, 04:00 (1.4d)\n10. **Decide: enter Learn AR with Specs (Devpost) or pass** \u00b7 ~2 min\n   \u21b3 Learn AR with Specs, $2.5K \u2014 due Mon Nov 09, 17:00 (1.9d)\n\nThese are the register's `gated_by` actions: steps only the founder can take (payments, submissions, identity checks). Everything not gated keeps moving without him.\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "tz6nthimotdmbr1gqghsu1ieha"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:56 EST",
+  "user": "user",
+  "message": "@ops-agent money",
+  "id": "um71msfkjjfhbd17pj3x1iyaho"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:56 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "8p6d8bs9jidqtbdm6nnaojebse"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:57 EST",
+  "user": "ops-agent",
+  "message": "**Money \u2014 what's owed and what's coming**\n\n\ud83d\udd34 **Overdue:**\n- $1,495.48 \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) (was due Wed Nov 04, 10:00, 3.4d ago)\n  \u21b3 Next step: Decide: recognise the TELUS debt or request written validation\n- $17.17 \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid (was due Fri Nov 06, 23:59, 0.8d ago)\n  \u21b3 Next step: Pay the $17.17 Etsy bill (or confirm it is already paid)\n- Wise Business verification \u2014 trading address rejected, 2-day clock (was due Sat Nov 07, 07:57, 0.5d ago)\n  \u21b3 Next step: Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)\n\n**Payment deadlines \u226414d:**\n- $500 \u2014 Agent37 $500 credit offer \u2014 $5 top-up final click (offer expires ~Nov 11) \u2014 due Wed Nov 11, 15:42 (3.9d)\n- $69.99 \u2014 Surfshark 12-mo VPN via Apple \u2014 cancel by Nov 11 or $69.99/yr starts Nov 12 \u2014 due Wed Nov 11, 23:59 (4.2d)\n\nAmounts are read from the register entries themselves; the Etsy payout bank (Airwallex) is locked by standing instruction and never appears here as an action.\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "ucwbyuzxipro3jki75sfecmzwh"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:58 EST",
+  "user": "user",
+  "message": "@ops-agent health",
+  "id": "55shu46wptnuzdxop7b61a49mh"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:58 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "de959eqqwin85y6xbnkbxwnmpr"
+ },
+ {
+  "time_toronto": "2026-11-07 18:59:59 EST",
+  "user": "ops-agent",
+  "message": "**Watch health \u2014 5/6 monitors UP** (kuma-lite, checked every 5 min from the fleet VM):\n- \ud83d\udfe2 `box-healthchecks` \u2014 UP since Sat Nov 07, 15:55\n- \ud83d\udfe2 `box-mattermost` \u2014 UP since Sat Nov 07, 15:55\n- \ud83d\udfe2 `box-ntfy` \u2014 UP since Sat Nov 07, 15:55\n- \ud83d\udfe2 `box-ssh` \u2014 UP since Sat Nov 07, 15:55\n- \ud83d\udfe2 `site-missionwinning` \u2014 UP since Sat Nov 07, 15:55\n- \ud83d\udd34 `site-sitebefore` \u2014 DOWN since Sat Nov 07, 15:55\n\nThe watch layer: the VM monitors the box (SSH, Healthchecks, ntfy, Mattermost) and both public sites; the box runs the dead-man's switch, Healthchecks, ntfy and Beszel back. The Watch Agent in this room posts here the moment any of these flips.\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "83oon97tqjd4mf97a7qiqcjw9o"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:00 EST",
+  "user": "user",
+  "message": "@ops-agent brief",
+  "id": "wiw39fe4jtnhfj9o5it1phituo"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:00 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "gtudm7chdbg3mgjmacwctqazmr"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:01 EST",
+  "user": "ops-agent",
+  "message": "**Portfolio brief** \u2014 2026-11-07 18:58 Toronto\n\n\ud83d\udd34 **Overdue (3):**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 3.4d overdue\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 0.8d overdue\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 0.5d overdue\n\n\ud83d\udfe0 **Due within 48h (7):**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59\n\n\ud83d\udd11 **Top gates waiting on the founder (10 total):**\n- Decide: recognise the TELUS debt or request written validation \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)\n- Pay the $17.17 Etsy bill (or confirm it is already paid) \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid\n- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) \u2014 Wise Business verification \u2014 trading address rejected, 2-day clock\n\n\ud83e\ude7a **Watch:** 5/6 monitors up \u2014 DOWN: site-sitebefore\n\ud83d\udcec **PRs:** 25 open on MissionWinning/67\n\ud83d\udccb **Board:** 97 active items (3 overdue, 4 \u226424h, 7 \u22643d, 22 \u22647d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "ep9cd8wyg7fgzkdyxgqj38ckwy"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:02 EST",
+  "user": "user",
+  "message": "@ops-agent status",
+  "id": "qkh3uwzijtfbx866jq1iask19o"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:02 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "dxemsy7mojgkt81z43nbs1rzic"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:04 EST",
+  "user": "ops-agent",
+  "message": "**Fleet watch status** (kuma-lite mutual watcher, box \u2194 VM):\n`2026-11-07T23:55:47Z DOWN: site-sitebefore (5/6 monitors up)`\nThe box watches the VM (dead-man's switch + Healthchecks + Beszel) and the VM watches the box back. A DOWN line names the monitor and how many are up.\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "3opsa81uafre9f51kobtzy7mha"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:04 EST",
+  "user": "user",
+  "message": "@ops-agent prs",
+  "id": "9h9us4ifmfyb8gq76cmjc9zsgr"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:04 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "7sr4x888updqbfjaowkspksjpe"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:06 EST",
+  "user": "ops-agent",
+  "message": "**Open pull requests \u2014 MissionWinning/67: 25**\n- #5588 docs(applications): Cosmos essay + Flip + Vultr Agent Rush founder prep\n- #5587 brain: redact-clone public_safe flag (partial rebuild of #5336)\n- #5586 brain: TASKS.jsonl vultr lane rows and stale review updates (rebuild)\n- #5585 brain: muse-spark memory export 2026-11-07 16:52 ET\n- #5584 roundtable: round 2 \u2014 full re-run (muse-spark convergence, single-seat)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "kerpbih33jd13qxmbdxgwijogc"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:06 EST",
+  "user": "user",
+  "message": "@ops-agent help",
+  "id": "1ztudkuzfpnp7g3j74nenmnb5y"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:06 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "81rqghzqz7nodgc1xfj5zxj5po"
+ },
+ {
+  "time_toronto": "2026-11-07 19:00:08 EST",
+  "user": "ops-agent",
+  "message": "**Ops Agent \u2014 Portfolio Ops Room.** Ask me in plain words:\n- `deadlines` \u2014 the board: overdue, due \u226424h, next five\n- `gates` \u2014 founder actions waiting, most urgent first\n- `money` \u2014 overdue payments + payment deadlines coming\n- `health` \u2014 per-monitor watch state (box \u2194 VM)\n- `brief` \u2014 one compact brief: overdues, due-48h, gates, watch, PRs\n- `status` \u2014 fleet watch summary line\n- `prs` \u2014 open pull requests on MissionWinning/67\nI answer from a labelled snapshot of the fleet's real register, watcher and GitHub data. The Watch Agent posts monitor flips and a twice-daily digest in this room.\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (data age is labelled, never hidden)",
+  "id": "kyx5tpbcfb81ipupuhq87gjqjo"
+ },
+ {
+  "time_toronto": "2026-11-07 19:02:02 EST",
+  "user": "admin",
+  "message": "watch-agent added to the channel by admin.",
+  "id": "ey48yb85bp8c58ddguhef16aze"
+ },
+ {
+  "time_toronto": "2026-11-07 19:02:02 EST",
+  "user": "watch-agent",
+  "message": "Hello! Tag @watch-agent to loop me in.",
+  "id": "kgkks73y43br7m4s41ckfei55h"
+ },
+ {
+  "time_toronto": "2026-11-07 19:02:14 EST",
+  "user": "watch-agent",
+  "message": "\ud83d\udc41\ufe0f **Watch Agent online** \u2014 I'll post in this room the moment a fleet monitor flips. Current watch: **5/6 up**.\n\ud83d\udd34 `site-sitebefore` is DOWN (since Sat Nov 07, 15:55).\n\n\u2014 Watch Agent \u00b7 snapshot 2026-11-07 18:58 Toronto",
+  "id": "7qfs7jx8wfdr8833crfid4dgdy"
+ },
+ {
+  "time_toronto": "2026-11-07 19:02:22 EST",
+  "user": "ops-agent",
+  "message": "\ud83d\udccb **Scheduled portfolio digest**\n\n**Portfolio brief** \u2014 2026-11-07 18:58 Toronto\n\n\ud83d\udd34 **Overdue (3):**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 3.4d overdue\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 0.8d overdue\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 0.5d overdue\n\n\ud83d\udfe0 **Due within 48h (7):**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59\n\n\ud83d\udd11 **Top gates waiting on the founder (10 total):**\n- Decide: recognise the TELUS debt or request written validation \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)\n- Pay the $17.17 Etsy bill (or confirm it is already paid) \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid\n- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) \u2014 Wise Business verification \u2014 trading address rejected, 2-day clock\n\n\ud83e\ude7a **Watch:** 5/6 monitors up \u2014 DOWN: site-sitebefore\n\ud83d\udcec **PRs:** 25 open on MissionWinning/67\n\ud83d\udccb **Board:** 97 active items (3 overdue, 4 \u226424h, 7 \u22643d, 22 \u22647d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (digest posts 08:45 + 21:45 Toronto; ask `brief` any time)",
+  "id": "qgq7fbbhmtrwbru95snsxzm3ua"
  }
 ]

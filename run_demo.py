@@ -2,7 +2,7 @@
 """Demo driver for the Portfolio Ops Room (runs on 67-build-1).
 
 Logs into Mattermost as the human user (MATTERMOST_USER from the Switch
-stack .env), asks the Ops Agent the three questions in #portfolio-ops the
+stack .env), asks the Ops Agent its question set in #portfolio-ops the
 way a person would, waits for the agent's answers to arrive in the channel
 (the Switch bridge publishes them), and exports the full transcript as
 JSON + Markdown with Toronto timestamps into ./demo-out/.
@@ -22,8 +22,13 @@ CHANNEL_ID = "t54df4eyri8o7kgbbjmppxd64c"  # #portfolio-ops on the Switch stack'
 AGENT_MM_USER = "rbw3pi3cr7yrdxwb3n4y1rfojy"  # ops-agent's Mattermost bot account (bridge posts as this user)
 QUESTIONS = [
     "@ops-agent deadlines",
+    "@ops-agent gates",
+    "@ops-agent money",
+    "@ops-agent health",
+    "@ops-agent brief",
     "@ops-agent status",
     "@ops-agent prs",
+    "@ops-agent help",
 ]
 
 
@@ -73,7 +78,7 @@ def main() -> None:
 
     call("POST", "/api/v4/posts", token, {
         "channel_id": CHANNEL_ID,
-        "message": "Running the portfolio from this room today. Ops Agent — three things:",
+        "message": "Running the portfolio from this room today. Ops Agent — the full set:",
     })
     for q in QUESTIONS:
         call("POST", "/api/v4/posts", token, {"channel_id": CHANNEL_ID, "message": q})

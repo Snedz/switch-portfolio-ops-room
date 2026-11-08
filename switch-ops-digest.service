@@ -1,0 +1,8 @@
+[Unit]
+Description=Portfolio Ops Room — scheduled digest (post via digest.py)
+After=network.target docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/portfolio-ops
+ExecStart=/usr/bin/python3 /root/portfolio-ops/digest.py
