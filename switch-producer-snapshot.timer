@@ -1,0 +1,11 @@
+# NOT INSTALLED / NOT ENABLED — see switch-producer-snapshot.service.
+[Unit]
+Description=Creator Room — producer snapshot refresh schedule (NOT ENABLED)
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+Unit=switch-producer-snapshot.service
+
+[Install]
+WantedBy=timers.target

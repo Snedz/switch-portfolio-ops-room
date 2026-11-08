@@ -5,3 +5,6 @@ switch-agent.env
 bridge.env
 demo-out/
 __pycache__/
+producer-agent.env
+producer-registration.json
+producer-snapshot.last-good.json

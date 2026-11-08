@@ -1,6 +1,6 @@
 {
- "generated_at_toronto": "2026-11-07 21:36 Toronto",
- "generated_at_utc": "2026-11-08T02:36:51Z",
+ "generated_at_toronto": "2026-11-07 22:19 Toronto",
+ "generated_at_utc": "2026-11-08T03:19:12Z",
  "sources": [
   "H3 goal files on the fleet VM (prompt pack, lane-2 plan, script template, test clips via os.stat)",
   "moneyprinter-test/RENDER-LOG.md + subtitle-tool/ (assembly proof)",
@@ -74,6 +74,38 @@
    "proven": true,
    "note": "Assembly proven Oct 31: MoneyPrinterTurbo rendered a draft short end-to-end (pipeline test, synthetic B-roll \u2014 not a publishable asset); subtitle burn-in tool built and tested (~/workspace/subtitle-tool/)."
   }
+ },
+ "credits": {
+  "free_credits_left": 2,
+  "free_credits_total": 150,
+  "cheapest_clip_credits": 28,
+  "api_cost_per_kept_clip_usd": "$2.60\u20133.90",
+  "route_decision": "PENDING \u2014 founder decision (API-first recommended)",
+  "spent_usd": 0,
+  "checked": "Balance as recorded in the H3 goal records, 2026-11-07; the reef test clip was never run because 2 < 28."
+ },
+ "review_gate": {
+  "human_review_required": true,
+  "h3_test_clips": "both clips human-reviewed Oct 29 \u2014 PASS verdicts recorded in renders",
+  "clipping_samples": "built and run on samples Oct 16; awaiting a campaign pick and founder review before any post",
+  "posted_ever": false,
+  "earned_usd": 0,
+  "gates": [
+   "G-POST: clipper posting blocked until the founder approves (C06)",
+   "G-PAYOUT: payout method not set (C07)",
+   "Studio working name undecided \u2014 nothing publishes without one (lane 2)"
+  ],
+  "publishing": "The Producer reports state only: it cannot generate, post, publish, or spend. Every publish path in this pipeline ends at a human."
+ },
+ "room": {
+  "room_name": "Creator Room",
+  "agent": "producer \u2014 deterministic, no LLM",
+  "intents_version": "v2 (status/credits/review/sources/health added; room documents live)",
+  "documents": [
+   "Creator Room \u2014 Pipeline Snapshot",
+   "Creator Room \u2014 Pipeline State & Review Gate"
+  ],
+  "snapshot_refresh": "manual one-command refresh (refresh-producer-snapshot.sh); the systemd timer unit ships in this repo NOT enabled \u2014 box-side generation is the next step"
  },
  "clipping": {
   "accounts_status": "unknown \u2014 Whop/TikTok/YouTube/IG/X accounts not confirmed created",

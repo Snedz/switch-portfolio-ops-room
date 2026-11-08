@@ -57,3 +57,44 @@ So `script` today means: the shape of episode 1 is fully specified (cold open mi
 - `@producer help` (21:41:08): the five intents, with the standing line "Where the pipeline is waiting, I say so."
 
 Full transcript: demo-out-producer/transcript.md on 67-build-1 (/root/creator-room/).
+
+---
+
+# v2 build — same night (Sat Nov 7, 22:16–22:21 ET)
+
+Producer Agent v2 deployed to the same service (`switch-producer-agent`, restarted alone; ops + watch services verified active and untouched, digest timer untouched). What v2 adds, all verified live below: intents 6 → 11 (`status`, `credits`, `review`, `sources`, `health`), **room documents**, the snapshot fallback chain (fresh → last-good cache → explicit unavailable), and a staleness banner (snapshot > 30 min old).
+
+## Room documents — live and updating
+
+Two documents are attached to the Creator Room (Switch gateway documents API; the agent API has no document endpoints — verified against its OpenAPI spec):
+
+- **Creator Room — Pipeline Snapshot**
+- **Creator Room — Pipeline State & Review Gate**
+
+Rendered from the same snapshot the agent answers from; visibility is private (console-owner) after the API rejected a room-scoped value. Change-and-re-ask beat, verified end-to-end: snapshot refreshed 22:16 → documents created (health answer, 22:18: "Room documents: enabled · 2 published · last sync 2026-11-07 22:17 Toronto · last change 2026-11-07 22:16 Toronto · visibility private (API default) · no errors") → snapshot refreshed again to **22:19** via the new one-command refresh → within one sync cycle both documents' content read back from the gateway carrying "**Snapshot generated:** 2026-11-07 22:19 Toronto" → `@producer status` + `@producer health` re-asked and answered from the 22:19 snapshot (2/2 PASS).
+
+## Smoke test — all 11 intents (scripts/smoke_producer.py, run 22:18 ET)
+
+```
+smoke 2026-11-07 22:18:47 EST — asking as user: 11 intents
+[PASS] status: **Status — the Creator Room in one screen:**
+[PASS] ideas: **Ideas — the H3 animated-shorts queue**
+[PASS] script: **Scripts — where the writing actually stands:**
+[PASS] renders: **Renders — what actually exists on disk:**
+[PASS] clips: **Clipping lane — true state as of 2026-10-16**
+[PASS] credits: **Credits — the true numbers:**
+[PASS] review: **Review gate — the human stays in the loop:**
+[PASS] sources: **Sources — where every fact in my answers comes from:**
+[PASS] next: **Next — the honest next action:**
+[PASS] health: **Health — Producer Agent self-check:**
+[PASS] help: **Producer Agent — Creator Room.**
+smoke result: 11/11 intents answered with labels in 22s
+```
+
+Verbatim `@producer credits` (22:18, snapshot 22:16): "Free Hailuo credits: **2 of 150** left · Cheapest clip: **28 credits** · Paid route, if chosen: $2.60–3.90 per kept clip (API-first) · Spent on generation to date: **$0** · Production-route decision: **PENDING — founder decision (API-first recommended)**".
+
+Unit tests: `test_producer.py` — 10 tests (routing, truthfulness invariants, fallback chain, document renderers), all passing.
+
+## Snapshot refresh — exact state
+
+Still **manual**: `refresh-producer-snapshot.sh` (the producer's own script, separate from the ops refresh) regenerates from the fleet VM and copies to the box; run twice tonight (22:16, 22:19). The systemd timer unit ships in this repo **not installed, not enabled** — the generator's sources live on the VM, and the generator now refuses (exit 2) to emit a snapshot on a host without them, so enabling the timer early would fail safe instead of publishing false state. Architecture and next steps: `docs/ARCHITECTURE.md`.

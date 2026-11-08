@@ -1,0 +1,18 @@
+# NOT INSTALLED / NOT ENABLED — shipped as the documented next step.
+#
+# Producer snapshot regeneration, as its own isolated unit (the ops
+# room's refresh path is a separate script on the VM and is never
+# touched by this). Enable ONLY once the snapshot generator's sources
+# (the H3 goal files) live on this host: the generator refuses to write
+# a snapshot when its source dir is absent, so enabling this early
+# fails safe — it logs the refusal instead of publishing false state.
+# Enablement steps are in docs/ARCHITECTURE.md ("Snapshot refresh").
+[Unit]
+Description=Creator Room — producer snapshot regeneration (NOT ENABLED)
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/creator-room
+ExecStart=/usr/bin/python3 /root/creator-room/make_producer_snapshot.py

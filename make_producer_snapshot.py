@@ -47,6 +47,13 @@ def stat_of(p: Path) -> dict | None:
 def main() -> None:
     now = datetime.now(TZ)
 
+    # Fail-safe: the H3 goal files are the primary source. On a host
+    # without them (e.g. 67-build-1, if the refresh timer is ever enabled
+    # there before the sources move), REFUSE to write a snapshot rather
+    # than emit one that falsely reports everything missing.
+    if not H3.exists():
+        raise SystemExit(f"refusing to generate: H3 source dir not present: {H3}")
+
     pack = (H3 / "h3-prompt-pack-v1.md").read_text() if (H3 / "h3-prompt-pack-v1.md").exists() else ""
     addendum = (H3 / "h3-prompt-pack-v1.2-addendum-2026-10-29.md").exists()
     ideas = {
@@ -106,6 +113,42 @@ def main() -> None:
         clipping_note = ("clipping section omitted: clipping-state.json not present at snapshot time; "
                          "the Producer never invents the clipping lane's state.")
 
+    credits = {
+        "free_credits_left": 2,
+        "free_credits_total": 150,
+        "cheapest_clip_credits": 28,
+        "api_cost_per_kept_clip_usd": "$2.60–3.90",
+        "route_decision": "PENDING — founder decision (API-first recommended)",
+        "spent_usd": 0,
+        "checked": ("Balance as recorded in the H3 goal records, 2026-11-07; "
+                    "the reef test clip was never run because 2 < 28."),
+    }
+
+    review_gate = {
+        "human_review_required": True,
+        "h3_test_clips": "both clips human-reviewed Oct 29 — PASS verdicts recorded in renders",
+        "clipping_samples": "built and run on samples Oct 16; awaiting a campaign pick and "
+                            "founder review before any post",
+        "posted_ever": False,
+        "earned_usd": 0,
+        "gates": ["G-POST: clipper posting blocked until the founder approves (C06)",
+                  "G-PAYOUT: payout method not set (C07)",
+                  "Studio working name undecided — nothing publishes without one (lane 2)"],
+        "publishing": ("The Producer reports state only: it cannot generate, post, publish, "
+                       "or spend. Every publish path in this pipeline ends at a human."),
+    }
+
+    room = {
+        "room_name": "Creator Room",
+        "agent": "producer — deterministic, no LLM",
+        "intents_version": "v2 (status/credits/review/sources/health added; room documents live)",
+        "documents": ["Creator Room — Pipeline Snapshot",
+                      "Creator Room — Pipeline State & Review Gate"],
+        "snapshot_refresh": ("manual one-command refresh (refresh-producer-snapshot.sh); "
+                             "the systemd timer unit ships in this repo NOT enabled — "
+                             "box-side generation is the next step"),
+    }
+
     snap = {
         "generated_at_toronto": now.strftime("%Y-%m-%d %H:%M Toronto"),
         "generated_at_utc": now.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -117,6 +160,9 @@ def main() -> None:
         "ideas": ideas,
         "scripts": scripts,
         "renders": renders,
+        "credits": credits,
+        "review_gate": review_gate,
+        "room": room,
         "clipping": clipping,
         "clipping_note": clipping_note,
         "next": {
