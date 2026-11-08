@@ -561,7 +561,7 @@ Three agents, two rooms, one deployment:
 | Agent | Switch room | Mattermost channel | Job |
 | --- | --- | --- | --- |
 | Ops Agent (`ops-agent`) | Portfolio Ops | `#portfolio-ops` | Answers `deadlines` / `gates` / `money` / `health` / `brief` / `status` / `prs` |
-| Watch Agent (`watch-agent`) | Portfolio Ops | `#portfolio-ops` | Posts fleet-monitor transitions as they happen |
+| Watch Agent (`watch-agent`) | Portfolio Ops | `#portfolio-ops` | Posts fleet-monitor transitions as they happen (logic dry-run verified only; no real monitor transition occurred tonight) |
 | Producer Agent (`producer`) | Creator Room | `#creator-room` | Answers `ideas` / `script` / `renders` / `clips` / `next` |
 
 The Switch primitives each part stands on:
@@ -569,7 +569,7 @@ The Switch primitives each part stands on:
 | Switch primitive | Where it carries this project |
 | --- | --- |
 | Agent registry — `POST /agents` with the deployment's registration token; each agent receives its own Switch-issued API key | All three agents exist only as registered Switch agents; none has another identity or channel |
-| Collaboration bridge — `POST /gateway/collaborations`, set as default | Auto-bridged both Mattermost channels into Switch rooms and publishes every agent answer into the channel under the agent's bot account |
+| Collaboration bridge — `POST /gateway/collaborations`, set as default | Auto-bridged the `#portfolio-ops` Mattermost channel into a Switch room; the Creator Room's channel was gateway-provisioned on the same Switch deployment. Publishes every agent answer into the channel under the agent's bot account |
 | Rooms — `agent_ids` on room create | Two rooms on one deployment, each created with its agent(s) inside; Switch's own greeting fired on join in both |
 | Event stream — `GET /agents/{id}/events` (long-poll) | How the Ops Agent and the Producer Agent receive the questions they answer |
 | Message API — `POST /agents/{id}/message` | How all three agents speak, including the Watch Agent's unprompted transition posts and the digest |
@@ -587,9 +587,10 @@ nobody to talk to.
   agents live: the Ops Agent and Watch Agent in the Portfolio Ops Room,
   the Producer Agent in the Creator Room. Transcripts:
   `evidence/transcript.md` and `evidence/creator-room-evidence.md`.
-- Both snapshots are refreshed every 5 minutes by cron, and every answer
-  prints its snapshot's generation time — data age is labelled, never
-  hidden.
+- The ops snapshot is refreshed every 5 minutes by cron; the producer
+  snapshot is a one-off, generated 21:36 ET Nov 7, and does not yet
+  auto-refresh. Every answer prints its snapshot's generation time —
+  data age is labelled, never hidden.
 - The digest timer fired **unattended at 21:45** tonight and posted the
   portfolio brief into the room with nobody in it (the last post in the
   ops transcript).
