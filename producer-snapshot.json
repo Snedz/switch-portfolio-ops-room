@@ -1,0 +1,109 @@
+{
+ "generated_at_toronto": "2026-11-07 21:36 Toronto",
+ "generated_at_utc": "2026-11-08T02:36:51Z",
+ "sources": [
+  "H3 goal files on the fleet VM (prompt pack, lane-2 plan, script template, test clips via os.stat)",
+  "moneyprinter-test/RENDER-LOG.md + subtitle-tool/ (assembly proof)",
+  "MissionWinning/67 VENTURES/clipping/STATE.json via GitHub connector (labelled copy)"
+ ],
+ "ideas": {
+  "prompt_pack_v1": true,
+  "prompt_pack_v12_addendum": true,
+  "items": [
+   {
+    "n": 1,
+    "title": "POD explainer test clip (how print-on-demand works)",
+    "state": "done \u2014 generated Oct 29, passed review (see renders)"
+   },
+   {
+    "n": 2,
+    "title": "BeforeChristmas product clip",
+    "state": "queued \u2014 prompt written; needs a hero product picked and a production route before it can be generated"
+   },
+   {
+    "n": 3,
+    "title": "Faceless animated explainer segment (espresso machine)",
+    "state": "queued \u2014 prompt written; 4 segments make one short; not generated"
+   }
+  ],
+  "lane2_pilot": {
+   "specced": true,
+   "state": "job-carded (JOB-h3-lane2-pilot), UNSTARTED",
+   "clips": [
+    "reef detail test (specced, unrun \u2014 blocked on credits/route)",
+    "one owned explainer short, one-failure-one-fix format (not scripted)"
+   ],
+   "also_blocked_on": "studio working name \u2014 founder decision; nothing publishes without one"
+  }
+ },
+ "scripts": {
+  "template_ready": true,
+  "template": "Virex-format explainer template (one failure \u2192 one fix \u2192 one visual beat; 5\u20137 beats + bookend close)",
+  "episode_scripts_exist": false,
+  "honest_state": "NO episode script exists. The template is ready; nobody has written episode 1 yet."
+ },
+ "renders": {
+  "clips": [
+   {
+    "file": "h3-test-clip-01-pod-explainer.mp4",
+    "stat": {
+     "exists": true,
+     "size_bytes": 8165048,
+     "size_mb": 8.17,
+     "modified_toronto": "2026-10-28 21:35 Toronto"
+    },
+    "verdict": "PASS \u2014 house 3D CG style, three connected shots (Oct 29)"
+   },
+   {
+    "file": "h3-test-clip-02-buttons-text.mp4",
+    "stat": {
+     "exists": true,
+     "size_bytes": 757276,
+     "size_mb": 0.76,
+     "modified_toronto": "2026-10-28 23:37 Toronto"
+    },
+    "verdict": "PASS \u2014 all four UI labels rendered exactly (BOOK/SERVICES/REVIEWS/DIRECTIONS), icons correct (Oct 29)"
+   }
+  ],
+  "generation": {
+   "state": "BLOCKED",
+   "why": "Free Hailuo credits: 2 of 150 left; cheapest clip costs 28. The reef test (clip 03) was never run for this reason.",
+   "unblocks_with": "founder production-route decision \u2014 API-first recommended (~$2.60\u20133.90 per kept clip at 2K); MiniMax API model id + key entitlement still unverified"
+  },
+  "assembly": {
+   "proven": true,
+   "note": "Assembly proven Oct 31: MoneyPrinterTurbo rendered a draft short end-to-end (pipeline test, synthetic B-roll \u2014 not a publishable asset); subtitle burn-in tool built and tested (~/workspace/subtitle-tool/)."
+  }
+ },
+ "clipping": {
+  "accounts_status": "unknown \u2014 Whop/TikTok/YouTube/IG/X accounts not confirmed created",
+  "earned_usd": 0,
+  "open_tasks": [
+   "C01 Whop signup (todo)",
+   "C02 clip accounts (todo)",
+   "C03 join campaigns (todo)",
+   "C04 stacked layout screencast (doing, draft only)",
+   "C05 10 clips/day queue (todo)",
+   "C06 post approved clips (blocked, G-POST)",
+   "C07 payout method (blocked, G-PAYOUT)"
+  ],
+  "payout_method": "not_set",
+  "pipeline_note": "autoclip.py pipeline built and run on samples Oct 16; CPU only, ~30s per 3 clips after transcript cached",
+  "pipeline_status": "done",
+  "samples_posted": false,
+  "samples_status": "done",
+  "source": "MissionWinning/67 VENTURES/clipping/STATE.json via GitHub connector, read 2026-11-07",
+  "updated": "2026-10-16T18:20-04:00",
+  "venture": "clipping"
+ },
+ "clipping_note": null,
+ "next": {
+  "honest_next_action": "The pipeline is mostly WAITING, and the wait has one name: the founder's production-route decision (API-first, ~$2.60\u20133.90 per kept clip). That single decision unblocks H3 generation \u2014 the BeforeChristmas clip, the faceless explainer, and the lane-2 pilot (reef test + first owned short).",
+  "also_waiting": [
+   "Hero product pick for the BeforeChristmas clip",
+   "Studio working name (publishing gate for lane 2)",
+   "Episode 1 script \u2014 the template is ready, the script is not written",
+   "Clipper revival needs a campaign pick (Whop account + campaign join are still todo; nothing has ever been posted; earned $0)"
+  ]
+ }
+}

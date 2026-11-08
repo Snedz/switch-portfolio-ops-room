@@ -1,6 +1,6 @@
 # Portfolio Ops Room — run a 64-venture portfolio from one chat room
 
-**Track: Best Business Workflow — Flip the Switch Hackathon (WeMakeDevs × Switch)**
+**Tracks: Best Business Workflow (Track 01, primary) · Best Personal or Creative Workflow (Track 02 — the Creator Room, below) — Flip the Switch Hackathon (WeMakeDevs × Switch)**
 **Team: Mission Winning (T3RBB9)**
 
 A solo founder runs a 64-venture portfolio with a fleet of AI agents. The
@@ -503,3 +503,110 @@ Two hard-won setup facts, so you don't lose an hour to them:
 MIT — see `LICENSE`. Switch itself is Apache-2.0 + Commons Clause
 (sandbox-quantum/switch); this project is an independent work built on its
 public agent/gateway APIs.
+
+---
+
+## Creator Room (Track 02) — the second room
+
+The same Switch deployment hosts a second room for the other half of one
+operator's working life: his media pipeline. Where the Portfolio Ops Room
+answers questions about the business (deadlines, money, machines), the
+**Creator Room** answers questions about the creative work — a faceless
+animated-shorts pipeline (MiniMax H3) plus a clipping lane — from a
+labelled snapshot of the real pipeline files.
+
+Its agent is the **Producer Agent** (`producer_agent.py`): deterministic,
+like the Ops Agent, registered with Switch the same way (its own
+Switch-issued API key, owner-only addressing), running as the systemd
+service `switch-producer-agent.service`. It was built by cloning the Ops
+Agent's proven shape — Switch event stream in, deterministic formatters
+over a snapshot, Switch message API out — and provisioned by
+`setup_producer.py` (agent registration, channel, room with the agent
+inside, env file), the counterpart of `setup_switch.py`.
+`make_producer_snapshot.py` builds `producer-snapshot.json` from real
+sources: the H3 prompt pack and lane-2 plan, the script template, the
+test clips' existence/size/date via `os.stat`, and the clipping lane's
+recorded state file. Ask `@producer` in the Creator Room:
+
+| Ask | Answer |
+| --- | --- |
+| `ideas` | The H3 animated-shorts queue with real titles and states, plus the lane-2 owned-shorts pilot slate |
+| `script` | Where the writing stands: template ready — and whether any episode script exists |
+| `renders` | The test clips that actually exist on disk (measured, not remembered) and whether generation is blocked |
+| `clips` | The clipping lane's recorded state, labelled with its date |
+| `next` | The honest next action — what the pipeline is waiting on, and on whom |
+
+The Producer went live at 21:37 EST on Nov 7 and was live-tested minutes
+later: six questions asked as a human user in the channel, six answers
+published through the Switch bridge, each in ~2 seconds. The full Q&A is
+in **`evidence/creator-room-evidence.md`**.
+
+**The pipeline's true state, in one paragraph.** Two H3 test clips exist
+— a print-on-demand explainer (8.17 MB) and a buttons/text test
+(0.76 MB), both generated Oct 29 and both passed review. The Virex-format
+script template is ready; **no episode script has been written**. New
+render generation is **BLOCKED**: the free Hailuo credit pool stands at
+2 of 150 (the cheapest clip costs 28), and unblocking it needs a founder
+production-route decision that has not been made. The clipping lane's
+pipeline was built and run on samples on Oct 16; it has **never posted a
+clip and has earned $0**. The Producer reports state only — it does not
+generate, post, or clip — and where the pipeline is waiting, it says so.
+That is the personal workflow, run the same way as the business one: the
+creative work's true state, one mention away, including the stuck parts.
+
+## How Switch is used — the map
+
+Three agents, two rooms, one deployment:
+
+| Agent | Switch room | Mattermost channel | Job |
+| --- | --- | --- | --- |
+| Ops Agent (`ops-agent`) | Portfolio Ops | `#portfolio-ops` | Answers `deadlines` / `gates` / `money` / `health` / `brief` / `status` / `prs` |
+| Watch Agent (`watch-agent`) | Portfolio Ops | `#portfolio-ops` | Posts fleet-monitor transitions as they happen |
+| Producer Agent (`producer`) | Creator Room | `#creator-room` | Answers `ideas` / `script` / `renders` / `clips` / `next` |
+
+The Switch primitives each part stands on:
+
+| Switch primitive | Where it carries this project |
+| --- | --- |
+| Agent registry — `POST /agents` with the deployment's registration token; each agent receives its own Switch-issued API key | All three agents exist only as registered Switch agents; none has another identity or channel |
+| Collaboration bridge — `POST /gateway/collaborations`, set as default | Auto-bridged both Mattermost channels into Switch rooms and publishes every agent answer into the channel under the agent's bot account |
+| Rooms — `agent_ids` on room create | Two rooms on one deployment, each created with its agent(s) inside; Switch's own greeting fired on join in both |
+| Event stream — `GET /agents/{id}/events` (long-poll) | How the Ops Agent and the Producer Agent receive the questions they answer |
+| Message API — `POST /agents/{id}/message` | How all three agents speak, including the Watch Agent's unprompted transition posts and the digest |
+| Identity guard + addressing policy | Every agent carries an owner-only addressing rule; the guard's notice visibly precedes answers to unlinked chat accounts in both rooms' transcripts |
+
+Remove Switch and both rooms go dark at once: no registry, no rooms, no
+bridge, no event stream, no publishing path — three formatters with
+nobody to talk to.
+
+## What is real / what is not yet
+
+**Real — verified tonight (Nov 7):**
+
+- Two Switch rooms on one self-hosted deployment, with three registered
+  agents live: the Ops Agent and Watch Agent in the Portfolio Ops Room,
+  the Producer Agent in the Creator Room. Transcripts:
+  `evidence/transcript.md` and `evidence/creator-room-evidence.md`.
+- Both snapshots are refreshed every 5 minutes by cron, and every answer
+  prints its snapshot's generation time — data age is labelled, never
+  hidden.
+- The digest timer fired **unattended at 21:45** tonight and posted the
+  portfolio brief into the room with nobody in it (the last post in the
+  ops transcript).
+- The two H3 test renders exist on disk (Oct 29, both PASS) — the
+  Producer reports them from `os.stat`, not from memory.
+
+**Not yet — stated plainly:**
+
+- No episode script has been written. The template is ready; the writing
+  has not started.
+- Render generation is blocked on a founder production-route decision
+  (free credits exhausted: 2 of 150 left; cheapest clip costs 28).
+- The clipping pipeline has never posted a clip and has earned $0; its
+  state in the Producer's snapshot is as of Oct 16.
+- The Watch Agent's transition logic is verified by a labelled dry-run
+  in the evidence. No natural monitor flip occurred tonight —
+  `site-sitebefore` stayed DOWN all evening — so no live transition post
+  exists yet.
+- The deployment's host (67-build-1) has a destroy date of **Dec 2**;
+  migration of the stack to a permanent host is planned, not done.

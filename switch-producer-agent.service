@@ -1,0 +1,13 @@
+[Unit]
+Description=Creator Room — Producer Agent (Switch-native)
+After=network.target network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/root/creator-room
+ExecStart=/usr/bin/python3 /root/creator-room/producer_agent.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
