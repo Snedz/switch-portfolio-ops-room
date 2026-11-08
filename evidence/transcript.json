@@ -204,6 +204,24 @@
   "id": "8tbckxjappri7d5egw6snb777w"
  },
  {
+  "time_toronto": "2026-11-07 18:37:12 EST",
+  "user": "user",
+  "message": "@ops-agent deadlines",
+  "id": "zgz7sc7ktt8xb8f4otdssu5ycr"
+ },
+ {
+  "time_toronto": "2026-11-07 18:37:13 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "1ozck3j3fty45m16415c7zy6wy"
+ },
+ {
+  "time_toronto": "2026-11-07 18:37:13 EST",
+  "user": "ops-agent",
+  "message": "**Deadline board** \u2014 96 active items (3 overdue, 3 due \u226424h, 8 due \u22643d, 22 due \u22647d)\n\n\ud83d\udd34 **Overdue:**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 was due Wed Nov 04, 10:00 (3.3d ago)\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 was due Fri Nov 06, 23:59 (0.7d ago)\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 was due Sat Nov 07, 07:57 (0.4d ago)\n\n\ud83d\udfe0 **Due within 24h:**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n\n**Next up:**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59 (0.1d)\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29 (0.3d)\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00 (0.7d)\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00 (1.0d)\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59 (1.3d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 17:24 Toronto (data age is labelled, never hidden)",
+  "id": "7s6ozfizc3rhfbbp1epyesz5xo"
+ },
+ {
   "time_toronto": "2026-11-07 18:59:52 EST",
   "user": "user",
   "message": "Evening check \u2014 running the full question set, Ops Agent:",
@@ -376,5 +394,29 @@
   "user": "ops-agent",
   "message": "\ud83d\udccb **Scheduled portfolio digest**\n\n**Portfolio brief** \u2014 2026-11-07 18:58 Toronto\n\n\ud83d\udd34 **Overdue (3):**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 3.4d overdue\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 0.8d overdue\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 0.5d overdue\n\n\ud83d\udfe0 **Due within 48h (7):**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59\n\n\ud83d\udd11 **Top gates waiting on the founder (10 total):**\n- Decide: recognise the TELUS debt or request written validation \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)\n- Pay the $17.17 Etsy bill (or confirm it is already paid) \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid\n- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) \u2014 Wise Business verification \u2014 trading address rejected, 2-day clock\n\n\ud83e\ude7a **Watch:** 5/6 monitors up \u2014 DOWN: site-sitebefore\n\ud83d\udcec **PRs:** 25 open on MissionWinning/67\n\ud83d\udccb **Board:** 97 active items (3 overdue, 4 \u226424h, 7 \u22643d, 22 \u22647d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 18:58 Toronto (digest posts 08:45 + 21:45 Toronto; ask `brief` any time)",
   "id": "qgq7fbbhmtrwbru95snsxzm3ua"
+ },
+ {
+  "time_toronto": "2026-11-07 19:06:24 EST",
+  "user": "user",
+  "message": "@ops-agent brief",
+  "id": "7j7b1wj7djdfzybz1fnxhcbbkw"
+ },
+ {
+  "time_toronto": "2026-11-07 19:06:24 EST",
+  "user": "ops-agent",
+  "message": "@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet \u2014 so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.",
+  "id": "xxhdhge7tprn7my3ujekoj1hto"
+ },
+ {
+  "time_toronto": "2026-11-07 19:06:25 EST",
+  "user": "ops-agent",
+  "message": "**Portfolio brief** \u2014 2026-11-07 19:04 Toronto\n\n\ud83d\udd34 **Overdue (4):**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 3.4d overdue\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 0.8d overdue\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 0.5d overdue\n- Rocket Pool GMC Round 42 grant \u2014 0.0d overdue\n\n\ud83d\udfe0 **Due within 48h (7):**\n- Rocket Pool GMC Round 42 grant \u2014 due Sat Nov 07, 18:59\n- Flip the Switch Hackathon (WeMakeDevs \u00d7 Switch, $10K) \u2014 submission \u2014 due Sat Nov 07, 23:29\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59\n\n\ud83d\udd11 **Top gates waiting on the founder (10 total):**\n- Decide: recognise the TELUS debt or request written validation \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)\n- Pay the $17.17 Etsy bill (or confirm it is already paid) \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid\n- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) \u2014 Wise Business verification \u2014 trading address rejected, 2-day clock\n\n\ud83e\ude7a **Watch:** 5/6 monitors up \u2014 DOWN: site-sitebefore\n\ud83d\udcec **PRs:** 25 open on MissionWinning/67\n\ud83d\udccb **Board:** 97 active items (4 overdue, 3 \u226424h, 7 \u22643d, 23 \u22647d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 19:04 Toronto (data age is labelled, never hidden)",
+  "id": "u9qazdqkjt817fgknzs4trb1sr"
+ },
+ {
+  "time_toronto": "2026-11-07 21:45:10 EST",
+  "user": "ops-agent",
+  "message": "\ud83d\udccb **Scheduled portfolio digest**\n\n**Portfolio brief** \u2014 2026-11-07 21:43 Toronto\n\n\ud83d\udd34 **Overdue (4):**\n- TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48) \u2014 3.5d overdue\n- BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid \u2014 0.9d overdue\n- Wise Business verification \u2014 trading address rejected, 2-day clock \u2014 0.6d overdue\n- Rocket Pool GMC Round 42 grant \u2014 0.1d overdue\n\n\ud83d\udfe0 **Due within 48h (5):**\n- MLH Solana Hackathon (registration confirmed) \u2014 due Sun Nov 08, 10:00\n- Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC \u2014 due Sun Nov 08, 18:00\n- Cosmos Institute \u00d7 Inherent essay (\u00a320K, \u22641,000 words) \u2014 submission \u2014 due Sun Nov 08, 23:59\n- Celo Agents on Open Rails ($5K in CELO) \u2014 due Mon Nov 09, 04:00\n- Learn AR with Specs, $2.5K \u2014 due Mon Nov 09, 17:00\n\n\ud83d\udd11 **Top gates waiting on the founder (10 total):**\n- Decide: recognise the TELUS debt or request written validation \u2014 TELUS / Debt Control Agency collection \u2014 decision (file DG231281, $1,495.48)\n- Pay the $17.17 Etsy bill (or confirm it is already paid) \u2014 BeforeChristmas Etsy bill $17.17 \u2014 suspension if unpaid\n- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) \u2014 Wise Business verification \u2014 trading address rejected, 2-day clock\n\n\ud83e\ude7a **Watch:** 5/6 monitors up \u2014 DOWN: site-sitebefore\n\ud83d\udcec **PRs:** 25 open on MissionWinning/67\n\ud83d\udccb **Board:** 96 active items (4 overdue, 2 \u226424h, 7 \u22643d, 23 \u22647d)\n\n\u2014 Ops Agent \u00b7 snapshot 2026-11-07 21:43 Toronto (digest posts 08:45 + 21:45 Toronto; ask `brief` any time)",
+  "id": "fc85dpq5nj849p4g7mdeiahmsc"
  }
 ]

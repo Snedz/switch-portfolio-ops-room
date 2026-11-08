@@ -3,9 +3,9 @@ Mattermost #portfolio-ops on the self-hosted Switch stack (67-build-1). The Ops 
 
 ## How to read this (2 minutes)
 
-This is the full, unedited channel export — 63 posts. One thing will
+This is the full, unedited channel export — 70 posts, 17:19–21:45 EST, Nov 7. One thing will
 strike you first: Switch's identity-guard notice ("I only take
-instructions from my owner…") precedes nearly every agent answer — 16
+instructions from my owner…") precedes nearly every agent answer — 18
 times in this export. That is the trust model mediating the conversation,
 by design: the demo chat account is deliberately *not* linked to a Switch
 user, so Switch verifies who is giving instructions before the agent
@@ -21,8 +21,10 @@ The moments that matter:
 | 17:25 | The clean demo round: `deadlines` / `status` / `prs` (also in `demo-excerpt.md`) |
 | 18:59–19:00 | The full question set, live: `deadlines`, `gates`, `money`, `health`, `brief`, `status`, `prs`, `help` — the `brief` at 19:00 is the single best 20 seconds |
 | 19:02 | The **Watch Agent** comes online and posts the true watch state (5/6 up, `site-sitebefore` DOWN) |
-| 19:02 | The first **scheduled digest** lands in the room (timer fires 08:45 + 21:45 Toronto; this one was a manual trigger of the same unit, to verify it) |
-| End | Watch Agent transition logic — **dry-run verification, labelled as such** (no natural monitor flip occurred in the window; the live service posts the next real one) |
+| 19:02 | The first **scheduled digest** lands in the room (a manual trigger of the timer's oneshot unit, to verify it — labelled as such when it happened) |
+| 19:06 | An evening re-check: the board now shows **4 overdue** — a grant window crossed its 18:59 deadline and the board moved on its own |
+| **21:45** | **The digest fires UNATTENDED** — the systemd timer posts the brief with nobody in the room. The workflow, running itself |
+| End | Watch Agent transition logic — **dry-run verification, labelled as such** (no natural monitor flip occurred all evening — `site-sitebefore` stayed DOWN; the live service posts the next real one) |
 
 **2026-11-07 17:19:21 EST — admin**
 
@@ -266,9 +268,38 @@ The box watches the VM (dead-man's switch + Healthchecks + Beszel) and the VM wa
 
 — Ops Agent · snapshot 2026-11-07 17:24 Toronto (data age is labelled, never hidden)
 
----
+**2026-11-07 18:37:12 EST — user**
 
-# Extended session — later the same evening (18:59–19:02 EST, Nov 7)
+@ops-agent deadlines
+
+**2026-11-07 18:37:13 EST — ops-agent**
+
+@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet — so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.
+
+**2026-11-07 18:37:13 EST — ops-agent**
+
+**Deadline board** — 96 active items (3 overdue, 3 due ≤24h, 8 due ≤3d, 22 due ≤7d)
+
+🔴 **Overdue:**
+- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — was due Wed Nov 04, 10:00 (3.3d ago)
+- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — was due Fri Nov 06, 23:59 (0.7d ago)
+- Wise Business verification — trading address rejected, 2-day clock — was due Sat Nov 07, 07:57 (0.4d ago)
+
+🟠 **Due within 24h:**
+- Rocket Pool GMC Round 42 grant — due Sat Nov 07, 18:59
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00
+
+**Next up:**
+- Rocket Pool GMC Round 42 grant — due Sat Nov 07, 18:59 (0.1d)
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29 (0.3d)
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00 (0.7d)
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00 (1.0d)
+- Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59 (1.3d)
+
+— Ops Agent · snapshot 2026-11-07 17:24 Toronto (data age is labelled, never hidden)
+
+# Extended session — later the same evening (18:59–19:06 EST, Nov 7)
 
 After the demo round the room grew: four more Ops Agent questions (`gates`, `money`, `health`, `brief` — the original three still work, re-asked below), a **second Switch agent** (the Watch Agent, which posts monitor flips itself), and a **scheduled digest** (systemd timer, 08:45 + 21:45 Toronto; the 19:02 digest below is a manual trigger of that same oneshot unit to verify it). The fleet snapshot also began refreshing every 5 minutes by cron, so its label stays current.
 
@@ -530,6 +561,75 @@ Hello! Tag @watch-agent to loop me in.
 
 — Ops Agent · snapshot 2026-11-07 18:58 Toronto (digest posts 08:45 + 21:45 Toronto; ask `brief` any time)
 
+**2026-11-07 19:06:24 EST — user**
+
+@ops-agent brief
+
+**2026-11-07 19:06:24 EST — ops-agent**
+
+@user I only take instructions from my owner, and this chat account isn't linked to a Switch user yet — so I can't tell whether that's you. If it is, link this account to your Switch user in Switch Console, post the code it shows you from this account, and try again.
+
+**2026-11-07 19:06:25 EST — ops-agent**
+
+**Portfolio brief** — 2026-11-07 19:04 Toronto
+
+🔴 **Overdue (4):**
+- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — 3.4d overdue
+- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — 0.8d overdue
+- Wise Business verification — trading address rejected, 2-day clock — 0.5d overdue
+- Rocket Pool GMC Round 42 grant — 0.0d overdue
+
+🟠 **Due within 48h (7):**
+- Rocket Pool GMC Round 42 grant — due Sat Nov 07, 18:59
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00
+- Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59
+
+🔑 **Top gates waiting on the founder (10 total):**
+- Decide: recognise the TELUS debt or request written validation — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48)
+- Pay the $17.17 Etsy bill (or confirm it is already paid) — BeforeChristmas Etsy bill $17.17 — suspension if unpaid
+- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) — Wise Business verification — trading address rejected, 2-day clock
+
+🩺 **Watch:** 5/6 monitors up — DOWN: site-sitebefore
+📬 **PRs:** 25 open on MissionWinning/67
+📋 **Board:** 97 active items (4 overdue, 3 ≤24h, 7 ≤3d, 23 ≤7d)
+
+— Ops Agent · snapshot 2026-11-07 19:04 Toronto (data age is labelled, never hidden)
+
+# The unattended proof — 21:45 EST
+
+Nobody asked for this one. At 21:45:10 the `switch-ops-digest.timer` fired its oneshot and the brief below landed in the room on its own — snapshot 21:43, board showing 4 overdue. This post is why the digest exists: the portfolio's state arriving on schedule, with no human in the room and no question asked. (Verified from this export after the fact; the 08:45 firing the next morning is the same unit.)
+
+**2026-11-07 21:45:10 EST — ops-agent**
+
+📋 **Scheduled portfolio digest**
+
+**Portfolio brief** — 2026-11-07 21:43 Toronto
+
+🔴 **Overdue (4):**
+- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — 3.5d overdue
+- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — 0.9d overdue
+- Wise Business verification — trading address rejected, 2-day clock — 0.6d overdue
+- Rocket Pool GMC Round 42 grant — 0.1d overdue
+
+🟠 **Due within 48h (5):**
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00
+- Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59
+- Celo Agents on Open Rails ($5K in CELO) — due Mon Nov 09, 04:00
+- Learn AR with Specs, $2.5K — due Mon Nov 09, 17:00
+
+🔑 **Top gates waiting on the founder (10 total):**
+- Decide: recognise the TELUS debt or request written validation — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48)
+- Pay the $17.17 Etsy bill (or confirm it is already paid) — BeforeChristmas Etsy bill $17.17 — suspension if unpaid
+- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) — Wise Business verification — trading address rejected, 2-day clock
+
+🩺 **Watch:** 5/6 monitors up — DOWN: site-sitebefore
+📬 **PRs:** 25 open on MissionWinning/67
+📋 **Board:** 96 active items (4 overdue, 2 ≤24h, 7 ≤3d, 23 ≤7d)
+
+— Ops Agent · snapshot 2026-11-07 21:43 Toronto (digest posts 08:45 + 21:45 Toronto; ask `brief` any time)
 
 ## Watch transition logic — dry-run verification (not channel posts)
 

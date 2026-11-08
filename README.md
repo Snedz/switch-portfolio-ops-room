@@ -217,7 +217,8 @@ Toronto) a oneshot posts the `brief` answer into the room under the Ops
 Agent's identity, so the portfolio's state arrives on schedule instead of
 waiting for someone to ask. The timer's first fire was verified by
 triggering the same oneshot unit manually (19:02 EST in the transcript);
-the timer itself is armed for 21:45 tonight.
+the timer then fired **unattended at 21:45** the same evening — that post
+is the last one in the transcript.
 
 **Data model — an honestly labelled snapshot.** The agent host can reach
 the register but the Switch host can't read the fleet VM's files, so
@@ -451,11 +452,14 @@ Two hard-won setup facts, so you don't lose an hour to them:
   three questions, three answers, ~1–2 s each. (The demo video covers
   these original three; the full command set is below.)
 - `evidence/transcript.md` / `transcript.json` — the full channel
-  transcript, exported via the Mattermost API, including Switch's greeting
-  and identity-guard notices — plus the extended same-evening session
-  (18:59–19:02 EST): all seven questions answered live, the Watch Agent
-  joining the room and posting its first status, the first scheduled
-  digest, and the Watch Agent's dry-run transition verification.
+  transcript (70 posts, 17:19–21:45 EST), exported via the Mattermost
+  API, including Switch's greeting and identity-guard notices — plus the
+  extended same-evening session (18:59–19:06 EST): all seven questions
+  answered live, the Watch Agent joining the room and posting its first
+  status, the first scheduled digest — and, at 21:45, **the digest
+  firing unattended** on its timer, with nobody in the room. The Watch
+  Agent's transition logic is verified by a labelled dry-run at the end
+  (no natural monitor flip occurred all evening).
 - The room is live on the demo deployment: Mattermost team `switch`,
   channel `#portfolio-ops`; Switch room "Portfolio Ops".
 
