@@ -1,6 +1,6 @@
 {
- "generated_at_toronto": "2026-11-07 19:04 Toronto",
- "generated_at_utc": "2026-11-08T00:04:00Z",
+ "generated_at_toronto": "2026-11-07 19:29 Toronto",
+ "generated_at_utc": "2026-11-08T00:29:00Z",
  "sources": [
   "deadline register (deadlines.json) on the fleet VM",
   "kuma-lite mutual watcher (watch-status.txt + per-monitor state)",
@@ -95,7 +95,7 @@
     "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
     "category": "hackathon",
     "due_toronto": "Sun Nov 08, 18:00",
-    "days_left": 1.0,
+    "days_left": 0.9,
     "band": "T-1",
     "status": "registered",
     "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
@@ -145,7 +145,7 @@
     "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
     "category": "hackathon",
     "due_toronto": "Sun Nov 08, 18:00",
-    "days_left": 1.0,
+    "days_left": 0.9,
     "band": "T-1",
     "status": "registered",
     "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
@@ -219,7 +219,7 @@
     "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
     "category": "hackathon",
     "due_toronto": "Sun Nov 08, 18:00",
-    "days_left": 1.0,
+    "days_left": 0.9,
     "band": "T-1",
     "status": "registered",
     "gate": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
@@ -303,7 +303,7 @@
    {
     "name": "Vultr Agent Rush Hackathon (lablab.ai) \u2014 submissions close Nov 8 UTC",
     "due_toronto": "Sun Nov 08, 18:00",
-    "days_left": 1.0,
+    "days_left": 0.9,
     "band": "T-1",
     "action": "Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)",
     "minutes": 2
@@ -363,7 +363,7 @@
     "name": "Agent37 $500 credit offer \u2014 $5 top-up final click (offer expires ~Nov 11)",
     "amount": "$500",
     "due_toronto": "Wed Nov 11, 15:42",
-    "days_left": 3.9,
+    "days_left": 3.8,
     "gate": "Final click on the Agent37 $5 top-up payment page \u2014 founder YES already given Nov 5, 1:08 PM (fleet record)"
    },
    {
@@ -376,7 +376,7 @@
   ]
  },
  "watch": {
-  "raw": "2026-11-08T00:01:36Z DOWN: site-sitebefore (5/6 monitors up)",
+  "raw": "2026-11-08T00:24:48Z DOWN: site-sitebefore (5/6 monitors up)",
   "monitors": [
    {
     "name": "box-healthchecks",

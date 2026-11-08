@@ -133,6 +133,69 @@ thing: format snapshot data and post it. There is no Auto mode or
 permission-bypass surface to leave on, no credentials to spend, and no
 execution path — read-only by construction, not by configuration.
 
+The proof, not the prose — the Ops Agent's detail as returned by the
+gateway API (`GET /gateway/agents/{id}`, Nov 7; excerpted to the
+safety-relevant fields — UI capability flags omitted, no credential
+material exists in this object):
+
+```json
+{
+  "id": "05dc8d3c-f0e9-4fed-8596-d5393a0cae70",
+  "name": "ops-agent",
+  "display_name": "Ops Agent",
+  "connector_type": "custom",
+  "connection_model": "always_on",
+  "tool_count": 0,
+  "model_count": 0,
+  "owner_name": "Agent Bootstrap",
+  "addressing_policy": {
+    "rules": [
+      {
+        "rooms": "*",
+        "room_groups": "*",
+        "users": [],
+        "agents": [],
+        "owner": true,
+        "owner_agents": true,
+        "platform": false
+      }
+    ]
+  },
+  "agent_type": "always_on",
+  "integration_profile": {
+    "event_reporting": [],
+    "connection_model": "always_on",
+    "message_exchange": true,
+    "command_capabilities": {
+      "reset": "unsupported",
+      "compact": "unsupported",
+      "interrupt": "unsupported"
+    },
+    "pre_invocation_mediation": [],
+    "post_invocation_mediation": []
+  },
+  "tools": [],
+  "models": [],
+  "rooms": [
+    {
+      "room_id": "f1db60bf-71e2-401e-badc-addf2bc30bbb",
+      "room_name": "Mattermost — Switch stack (67-build-1): Portfolio Ops",
+      "archived": false,
+      "status": "live"
+    }
+  ],
+  "sessions": [
+    { "lifecycle": "heartbeat", "state": "live" }
+  ]
+}
+```
+
+Read the `addressing_policy` rule literally: `users: []`, `agents: []`,
+`platform: false` — the *only* principals allowed to address this agent
+are its owner and the owner's other agents. That one rule is the whole
+access-control story, and it is Switch's, enforced before the agent ever
+sees a message.
+
 ### The second agent — the Watch Agent
 
 `watch_agent.py` — a second deterministic agent with the same posture
@@ -167,6 +230,176 @@ for every answer and print its generation time on every reply. A snapshot
 is never dressed up as a live query — and refreshing it mid-demo changed
 the label on the next answer from 17:19 to 17:24, which is in the
 transcript.
+
+## Try it offline first (60 seconds)
+
+No Switch stack, no Mattermost, no secrets, no network — the agent's
+seven answers, computed from the shipped example snapshot:
+
+```bash
+python3 quickstart.py        # prints all seven answers
+python3 test_formatters.py   # 6 tests — the exactness pitch, made flesh
+```
+
+`switch_agent.py` is a service and cannot be imported offline (it reads
+its Switch credentials at import time), so `quickstart.py` carries the
+seven formatters duplicated verbatim — the demo can never touch the
+running agent. Real output, against `snapshot.example.json` (generated
+2026-11-07 19:29 Toronto):
+
+<details>
+<summary>Full quickstart output — all seven answers</summary>
+
+```
+(reading snapshot.example.json)
+
+
+======================================================================
+@ops-agent deadlines
+======================================================================
+**Deadline board** — 97 active items (4 overdue, 3 due ≤24h, 7 due ≤3d, 23 due ≤7d)
+
+🔴 **Overdue:**
+- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — was due Wed Nov 04, 10:00 (3.4d ago)
+- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — was due Fri Nov 06, 23:59 (0.8d ago)
+- Wise Business verification — trading address rejected, 2-day clock — was due Sat Nov 07, 07:57 (0.5d ago)
+- Rocket Pool GMC Round 42 grant — was due Sat Nov 07, 18:59 (0.0d ago)
+
+🟠 **Due within 24h:**
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00
+
+**Next up:**
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29 (0.2d)
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00 (0.6d)
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00 (0.9d)
+- Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59 (1.2d)
+- Celo Agents on Open Rails ($5K in CELO) — due Mon Nov 09, 04:00 (1.4d)
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent gates
+======================================================================
+**Founder gates — 10 actions waiting on you, most urgent first:**
+1. **Decide: recognise the TELUS debt or request written validation** · ~10 min
+   ↳ TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — overdue by 3.4d
+2. **Pay the $17.17 Etsy bill (or confirm it is already paid)** · ~3 min
+   ↳ BeforeChristmas Etsy bill $17.17 — suspension if unpaid — overdue by 0.8d
+3. **Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)** · ~10 min
+   ↳ Wise Business verification — trading address rejected, 2-day clock — overdue by 0.5d
+4. **Decide: post a Rocket Pool GMC Round 42 grant application or skip (low fit — ETH staking)** · ~2 min
+   ↳ Rocket Pool GMC Round 42 grant — due Sat Nov 07, 18:59 (-0.0d)
+5. **Decide: build + submit a project, or let the registration lapse (prep pack in MissionWinning/67 PR #5523)** · ~2 min
+   ↳ Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29 (0.2d)
+6. **Pick the entry: Solana payment verdict gate with devnet signing (recommended) or the read-only Settlement Receipt Verifier** · ~2 min
+   ↳ MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00 (0.6d)
+7. **Decide: enter Vultr Agent Rush or pass (submissions close Nov 8 UTC)** · ~2 min
+   ↳ Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00 (0.9d)
+8. **Review the [FOUNDER] block in the prep pack and submit the essay** · ~15 min
+   ↳ Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59 (1.2d)
+9. **Decide: enter Celo (needs real mainnet funds + real users) or skip** · ~2 min
+   ↳ Celo Agents on Open Rails ($5K in CELO) — due Mon Nov 09, 04:00 (1.4d)
+10. **Decide: enter Learn AR with Specs (Devpost) or pass** · ~2 min
+   ↳ Learn AR with Specs, $2.5K — due Mon Nov 09, 17:00 (1.9d)
+
+These are the register's `gated_by` actions: steps only the founder can take (payments, submissions, identity checks). Everything not gated keeps moving without him.
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent money
+======================================================================
+**Money — what's owed and what's coming**
+
+🔴 **Overdue:**
+- $1,495.48 — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) (was due Wed Nov 04, 10:00, 3.4d ago)
+  ↳ Next step: Decide: recognise the TELUS debt or request written validation
+- $17.17 — BeforeChristmas Etsy bill $17.17 — suspension if unpaid (was due Fri Nov 06, 23:59, 0.8d ago)
+  ↳ Next step: Pay the $17.17 Etsy bill (or confirm it is already paid)
+- Wise Business verification — trading address rejected, 2-day clock (was due Sat Nov 07, 07:57, 0.5d ago)
+  ↳ Next step: Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie)
+
+**Payment deadlines ≤14d:**
+- $500 — Agent37 $500 credit offer — $5 top-up final click (offer expires ~Nov 11) — due Wed Nov 11, 15:42 (3.8d)
+- $69.99 — Surfshark 12-mo VPN via Apple — cancel by Nov 11 or $69.99/yr starts Nov 12 — due Wed Nov 11, 23:59 (4.2d)
+
+Amounts are read from the register entries themselves; the Etsy payout bank (Airwallex) is locked by standing instruction and never appears here as an action.
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent health
+======================================================================
+**Watch health — 5/6 monitors UP** (kuma-lite, checked every 5 min from the fleet VM):
+- 🟢 `box-healthchecks` — UP since Sat Nov 07, 15:55
+- 🟢 `box-mattermost` — UP since Sat Nov 07, 15:55
+- 🟢 `box-ntfy` — UP since Sat Nov 07, 15:55
+- 🟢 `box-ssh` — UP since Sat Nov 07, 15:55
+- 🟢 `site-missionwinning` — UP since Sat Nov 07, 15:55
+- 🔴 `site-sitebefore` — DOWN since Sat Nov 07, 15:55
+
+The watch layer: the VM monitors the box (SSH, Healthchecks, ntfy, Mattermost) and both public sites; the box runs the dead-man's switch, Healthchecks, ntfy and Beszel back. The Watch Agent in this room posts here the moment any of these flips.
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent brief
+======================================================================
+**Portfolio brief** — 2026-11-07 19:29 Toronto
+
+🔴 **Overdue (4):**
+- TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48) — 3.4d overdue
+- BeforeChristmas Etsy bill $17.17 — suspension if unpaid — 0.8d overdue
+- Wise Business verification — trading address rejected, 2-day clock — 0.5d overdue
+- Rocket Pool GMC Round 42 grant — 0.0d overdue
+
+🟠 **Due within 48h (7):**
+- Rocket Pool GMC Round 42 grant — due Sat Nov 07, 18:59
+- Flip the Switch Hackathon (WeMakeDevs × Switch, $10K) — submission — due Sat Nov 07, 23:29
+- MLH Solana Hackathon (registration confirmed) — due Sun Nov 08, 10:00
+- Vultr Agent Rush Hackathon (lablab.ai) — submissions close Nov 8 UTC — due Sun Nov 08, 18:00
+- Cosmos Institute × Inherent essay (£20K, ≤1,000 words) — submission — due Sun Nov 08, 23:59
+
+🔑 **Top gates waiting on the founder (10 total):**
+- Decide: recognise the TELUS debt or request written validation — TELUS / Debt Control Agency collection — decision (file DG231281, $1,495.48)
+- Pay the $17.17 Etsy bill (or confirm it is already paid) — BeforeChristmas Etsy bill $17.17 — suspension if unpaid
+- Upload a trading-address proof (utility bill, not mobile, or bank statement, <3 months, addressed to Mission Winning LLC) + complete phone ID verification (ID photo + selfie) — Wise Business verification — trading address rejected, 2-day clock
+
+🩺 **Watch:** 5/6 monitors up — DOWN: site-sitebefore
+📬 **PRs:** 25 open on MissionWinning/67
+📋 **Board:** 97 active items (4 overdue, 3 ≤24h, 7 ≤3d, 23 ≤7d)
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent status
+======================================================================
+**Fleet watch status** (kuma-lite mutual watcher, box ↔ VM):
+`2026-11-08T00:24:48Z DOWN: site-sitebefore (5/6 monitors up)`
+The box watches the VM (dead-man's switch + Healthchecks + Beszel) and the VM watches the box back. A DOWN line names the monitor and how many are up.
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+======================================================================
+@ops-agent prs
+======================================================================
+**Open pull requests — MissionWinning/67: 25**
+- #5588 docs(applications): Cosmos essay + Flip + Vultr Agent Rush founder prep
+- #5587 brain: redact-clone public_safe flag (partial rebuild of #5336)
+- #5586 brain: TASKS.jsonl vultr lane rows and stale review updates (rebuild)
+- #5585 brain: muse-spark memory export 2026-11-07 16:52 ET
+- #5584 roundtable: round 2 — full re-run (muse-spark convergence, single-seat)
+
+— Ops Agent · snapshot 2026-11-07 19:29 Toronto (data age is labelled, never hidden)
+
+That's the whole agent: seven deterministic answers over a
+labelled snapshot. In the room, Switch delivers the question and
+publishes the answer — see README.md and evidence/.
+```
+
+</details>
 
 ## Reproduce it
 
@@ -245,6 +478,8 @@ Two hard-won setup facts, so you don't lose an hour to them:
 
 | File | Role |
 | --- | --- |
+| `quickstart.py` | Offline demo: prints all seven answers from the example snapshot — no Switch stack, no secrets |
+| `test_formatters.py` | Offline tests for the answer formatters (run against the example snapshot) |
 | `switch_agent.py` | The Ops Agent service (Switch event stream → answers → Switch message API) |
 | `watch_agent.py` | The Watch Agent service (snapshot monitor diff → transition posts) |
 | `digest.py` | Posts the twice-daily portfolio digest (run by the timer) |
